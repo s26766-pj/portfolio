@@ -202,11 +202,22 @@ public class Main {
             zadanie_04();
         }
     }
-    public static void sortuj(ArrayList<Double> zbior_liczb) {
+    public static void sortuj_od_najwiekszej(ArrayList<Double> zbior_liczb) {
         for (int i = 1; i < zbior_liczb.size(); i++) {
             double index = zbior_liczb.get(i);
             int j = i;
             while (j > 0 && zbior_liczb.get(j - 1) < index) {
+                zbior_liczb.set(j, zbior_liczb.get(j - 1));
+                j--;
+            }
+            zbior_liczb.set(j, index);
+        }
+    }
+    public static void sortuj_od_najmniejszej(ArrayList<Double> zbior_liczb) {
+        for (int i = 1; i < zbior_liczb.size(); i++) {
+            double index = zbior_liczb.get(i);
+            int j = i;
+            while (j > 0 && zbior_liczb.get(j - 1) > index) {
                 zbior_liczb.set(j, zbior_liczb.get(j - 1));
                 j--;
             }
@@ -231,7 +242,12 @@ public class Main {
             }
             // uzyskaj specyficzny format liczby
             DecimalFormat specyficzny_format = new DecimalFormat("#.000000");
-            sortuj(zbior_liczb);
+            sortuj_od_najwiekszej(zbior_liczb);
+            for (Double aDouble : zbior_liczb) {
+                drukuj_linje(specyficzny_format.format(aDouble));
+            }
+            drukuj(" ");
+            sortuj_od_najmniejszej(zbior_liczb);
             for (Double aDouble : zbior_liczb) {
                 drukuj_linje(specyficzny_format.format(aDouble));
             }
