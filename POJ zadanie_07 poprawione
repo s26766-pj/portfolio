@@ -1,0 +1,67 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            zadanie_07();
+        } catch (InputMismatchException e) {
+            blad();
+        }
+    }
+    public static void blad() {
+        drukuj("BŁĄD");
+    }
+    public static void drukuj(String text) {
+        System.out.println(text);
+    }
+    public static void zadanie_07() {
+        final int MAX_SIZE = 100; // maksymalna wielkość tablic
+        int[] A = new int[MAX_SIZE]; // deklaracja tablicy A
+        int[] B = new int[MAX_SIZE]; // deklaracja tablicy B
+        int n, m; // liczba elementów w tablicach
+        int iloczyn = 0; // iloczyn skalarny
+
+        drukuj("Podaj wielkosci wektorow, liczby n i m (n m): ");
+        Scanner scanner = new Scanner(System.in);
+        String od_uzytkownika = scanner.nextLine();
+        String[] liczby = od_uzytkownika.split(" ");
+        n = Integer.parseInt(liczby[0]);
+        m = Integer.parseInt(liczby[1]);
+
+        if (n <= 0 || n > MAX_SIZE) {
+            blad();
+            return;
+        }
+        drukuj("Podaj wartosci pierwszego wektora: ");
+        String od_uzytkownika_wektor_pierwszy = scanner.nextLine();
+        String[] wektor_pierwszy = od_uzytkownika_wektor_pierwszy.split(" ");
+
+        for (int i = 0; i < n; i++) {
+            A[i] = Integer.parseInt(wektor_pierwszy[i]);
+        }
+
+        if (m <= 0 || m > MAX_SIZE) {
+            blad();
+            return;
+        }
+        drukuj("Podaj wartosci drugiego wektora: ");
+        String od_uzytkownika_wektor_drugi = scanner.nextLine();
+        String[] wektor_drugi = od_uzytkownika_wektor_drugi.split(" ");
+
+        for (int i = 0; i < m; i++) {
+            B[i] = Integer.parseInt(wektor_drugi[i]);
+        }
+
+        if (n != m) {
+            blad();
+            return;
+        }
+
+        for (int i = 0; i < n; i++) {
+            iloczyn += A[i] * B[i];
+        }
+        drukuj("Iloczyn skalarny tablic: " + iloczyn);
+    }
+
+}
