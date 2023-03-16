@@ -1,6 +1,5 @@
 package Functions;
 
-import Common.Print;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,8 +10,9 @@ public class Pangram {
 
     public static char[] Pangram_build(String zdanie_do_sprawdzenia) {
 
+        String fix_case = zdanie_do_sprawdzenia.toUpperCase().trim().replaceAll("\\s","");
         List<Character> lista_znakow = new ArrayList<>();
-        for (char ch : zdanie_do_sprawdzenia.toCharArray()) {
+        for (char ch : fix_case.toCharArray()) {
             lista_znakow.add(ch);
         }
         Collections.sort(lista_znakow);
