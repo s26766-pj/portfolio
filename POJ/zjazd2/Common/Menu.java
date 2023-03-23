@@ -20,8 +20,6 @@ public class Menu {
                 case "9" -> Task_09.run_task_09();
                 case "10" -> Task_10.run_task_10();
                 case "11" -> Task_11.run_task_11();
-             //   case "12" -> Task_12.run_task_12();
-             //   case "13" -> Task_13.run_task_13();
             }
         }
     }
