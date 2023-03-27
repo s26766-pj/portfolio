@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# pobierz nazwę bieżącego skryptu
+script_name=$(basename "$BASH_SOURCE")
+
+# wyrażenie regularne do dopasowania nazwy pliku kończącej się na .sh
+regex="\.sh$"
+
+# jeśli nazwa skryptu nie pasuje do wyrażenia regularnego
+if [[ ! "$script_name" =~ $regex ]]; then
+  # zmień nazwę pliku poprzez dodanie rozszerzenia .sh
+  new_name="${script_name}.sh"
+  cp "$script_name" "$new_name" && rm "$script_name"
+  echo "Zmieniono nazwę skryptu na $new_name"
+fi
