@@ -1,0 +1,157 @@
+above mentioned - WYŻEJ WYMIENIONY
+access control - KONTROLA DOSTĘPU
+ad/advertisement - REKLAMA
+address resolution protocol (ARP) - PROTOKÓŁ ODWZOROWANIA ADRESÓW
+adjacent - SĄSIADUJĄCY
+(to) allow (for something) - UMOŻLIWIAĆ/UWZGLĘDNIAĆ COŚ
+anchor - KOTWICA
+anchor text - TEKST ZAKOTWICZENIA
+and so on and so forth - I TAK DALEJ
+application layer - WARSTWA APLIKACJI
+backbone layer - ŚCIEĆ SZKIELETOWA/SIEĆ PODSTAWOWA
+bottleneck - WĄSKIE GARDŁO
+
+carrier sense multiple access with collision avoidance (CSMA/CA)
+METODA/PROTOKÓŁ WIELODOSTĘPU DO ŁĄCZA ZE ŚLEDZENIEM STANU NOŚNIKA I UNIKANIEM KOLIZJI
+
+carrier sense multiple access with collision detection (CSMA/CD)
+METODA/PROTOKÓŁ WIELODOSTĘPU DO ŁĄCZA ZE ŚLEDZENIEM STANU
+NOŚNIKA I WYKRYWANIEM KOLIZJI
+
+cell phone network - SIEĆ KOMÓRKOWA
+chunk – SPORY KAWAŁ/ZNACZNA CZĘŚĆ
+client – KLIENT
+communication service - USŁUGA KOMUNIKACYJNA
+congestion – KOREK/ZATOR
+(to) convert (something into something) - PRZEKSZTAŁCAĆ (W COŚ INNEGO)
+(to) crawl - PEŁZAĆ
+crawler - PAJĄK/PROGRAM KTÓRY SYSTEMATYCZNIE PRZEGLĄDA WWW
+data encapsulation – ODBUDOWYWANIE DANYCH
+data integrity - INTEGRALNOŚĆ DANYCH
+data packet – PAKIET DANYCH
+data transmission – TRANSMISJA DANYCH
+default gateway – BRAMA DOMYŚLNA
+delay - OPÓŹNIENIE
+destination – MIEJSCE DOCELOWE
+destination address – ADRES DOCELOWY
+determinant – WYZNACZNIK/CZYNNIK WARUNKUJĄCY
+digital subscriber line (DSL) - CYFROWA LINIA ABONENCKA
+(to) display - WYŚWIETLAĆ
+domain name – NAZWA DOMENY
+(to) enable - UMOŻLIWIAĆ
+(to) enhance - POPRAWIAĆ/ZWIĘKSZAĆ
+entry – WPIS
+factor – CZYNNIK
+Federal Networking Council (FNC) - FEDERALNA RADA DS. SIECI KOMPUTEROWYCH
+feedback – INFORMACJA ZWROTNA
+(to) fetch - POBIERAĆ/SPRAWDZAĆ
+fiber distributed data interface (FDDI) - INTERFEJS DANYCH SPRAWDZANYCH ŚWIATŁOWODEM
+fiber-optic cable – KABEL ŚWIATŁOWODOWY
+file transfer protocol (FTP) - PROTOKÓŁ PRZESYŁANIA PLIKÓW
+(to) forge - PODRABIAĆ FAŁSZOWAĆ
+frequency - CZĘSTOTLIWOŚĆ
+full-text query – ZAPYTANIE PEŁNOTEKSTOWE
+full-text search – WYSZUKIWANIE PEŁNOTEKSTOWE
+full-text search capability - MOŻLIWOŚĆ WYSZUKIWANIA PEŁNOTEKSTOWEGO
+(to) garble - ZNIEKSZTAŁCAĆ
+googlebot – BOT WYSZUKIWARKI GOOGLE
+hit list – LISTA WYNIKÓW WYSZUKIWANIA
+hypertext transfer protocol (HTTP) - PROTOKÓŁ PRZESYŁANIA HIPERTEKSTU
+indexed search – WYSZUKIWANIE INDEKSOWE
+indexing process – PROCES INDEKSOWANIA
+information service - USŁUGA INFORMACYJNA
+
+International Organization for Standardization (ISO)
+MIĘDZYNARODOWA ORGANIZACJA NORMALIZACYJNA
+
+internet control message protocol (ICMP) - INTERNETOWY PROTOKÓŁ KOMUNIKATÓW KONTROLNYCH
+internet layer – WARSTA INTERNETOWA
+inter protocol (IP) - PROTOKÓŁ KOMUNIKACYJNY INTERNETU
+internet relay chat (IRC) - INTERNETOWY CZAT W CZASIE RZECZYWISTYM
+internet service - USŁUGA INTERNETOWA
+internet service provider (ISP) - DOSTAWCA USŁUG INTERNETOWYCH
+IP address – ADRES IP
+IP datagram – KOMUNIKAT BEZPOŁĄCZENIOWY
+IP spoofing - FAŁSZOWANIE ADRESU IP
+(to) jitter - DRGAĆ
+junction - SKRZYŻOWANIE
+keyword - SŁOWO KLUCZOWE
+(to) label (something) - OZNACZYĆ COŚ ETYKIETĄ
+layer – WARSTWA
+logical address – ADRES LOGICZNY
+MAC address – ADRES MAC
+medium access control (MAC) - KONTROLA DOSTĘPU DO MEDIUM TRASMISYJNEGO
+menu-driven client/server application – APLIKACJA TYPU KLIENT/SERWER STEROWANA PRZEZ MENU
+network access layer – WARSTWA DOSTĘPU DO SIECI/WARSTWA FIZYCZNA
+network access point (NAP) - PUNKT DOSTĘPU DO SIECI
+network interface card (NIC) - KARTA SIECIOWA
+network protocol - PROTOKÓŁ SIECIOWY
+network service - USŁUGA SIECIOWA
+occurrence - WYSTĄPIENIE
+
+open systems interconnection (OSI) reference model
+MODEL ODNIESIENIA ŁĄCZENIA SYSTEMÓW OTWARTYCH/MODEL ODNIESIENIA
+
+orgin – POCHODZENIE
+outside link – LINK ZEWNĘTRZ
+overall score – WYNIK OGÓLNY
+packet – PAKIET
+packet switching – KOMUTACJA PAKIETÓW/TRANSMISJA DANYCH W POSTACI PAKIETÓW
+parsing – ANALIZA SKŁADNIOWA
+physical network - SIEĆ FIZYCZNA
+point of presence (POP) - PUNKT PRZYŁĄCZENIA
+pinter - WSKAŹNIK
+predecessor – POPRZEDNIK
+priority queuing (PQ) - KOLEJKOWANIE PRIORYTETOWE
+pulse of light – IMPULS ŚWIATŁA
+radio signal - SYGNAŁ RADIOWY
+random – LOSOWY/PRZYPADKOWY
+(to) rate - KLASYFIKOWAĆ/OCENIAĆ
+real-time traffic – RUCH SIECIOWY W CZASIE RZECZYWISTYM
+(to) reassemble – PONOWNIE ZŁOŻYĆ
+reciver host – HOST ODBIORCY
+(to) regard - UWAŻAĆ/UZNAWAĆ (ZA COŚ)
+related search – WYSZUKIWANIE POWIĄZANE
+revelant – ISTOTNY/ZWIĄZANY Z TEMATEM/TRAFNY
+reliability - SOLIDNOŚĆ/NAZAWODNOŚĆ/RZETELNOŚĆ
+remote access – DOSTĘP ZDALNY
+remote client – KLIENT ZDALNY
+resolution – POSTANOWIENIE/UCHWAŁA
+resource path - ŚCIEŻKA DO ZASOBÓW
+(to) retrieve - POBIERAĆ/ODNALEŹĆ
+reverse address resolution protocol (RARP) - PROTOKÓŁ ODWROTNEGO ODWZOROWANIA ADRESÓW
+route – TRASA/DROGA
+(to) route - KIEROWAĆ (JAKĄŚ TRASĄ)
+router – RUTER
+routing – TRASOWANIE/WYZNACZAĆ TRASĘ DLA PAKIETU DANYCH W SIECIACH
+search engine – WYSZUKIWARKA
+search engine result page (SERP) - STRONA Z WYNIKAMI WYSZUKIWANIA
+search result – WYNIK WYSZUKIWANIA
+second-level domain (SLD) - DOMENA DRUGIEGO POZIOMU
+sender host – HOST NADAWCY
+simple mail transfer protocol (SMTP) - PROTOKÓŁ WYSYŁANIA POCZTY ELEKTRONICZNEJ
+simply put - MÓWIĄC PROSTO
+snippet of text – FRAGMENT TEKSTU
+source address – ADRES ŹRÓDŁOWY
+spider - PAJĄK
+(to) split apart - DZIELIĆ/ROZDZIELAĆ (NA CZĘŚCI)
+stack – STOS
+subdomain – PODDOMENA/PODOBSZAR
+term – TERMIN/POJĘCIE
+token passing – PRZEKAZYWANIE ZNACZNIKA
+top-level domain (TLD) - DOMENA NAJWYŻSZEGO POZIOMU
+trademarked algorithm – ALGORYTM OZNACZONY ZNAKIEM HANDLOWYM
+transmission control protocol (TCP) - PROTOKÓŁ KONTROLI TRANSMISJI
+
+transmission control protocol / internet protocol (TCP/IP)
+PROTOKÓŁ STEROWANIA TRANSMISJĄ W SIECI
+
+transport layer – WARSTWA TRANSPORTOWA
+uniform resource locator (URL) - JEDNOLITY LOKALIZATOR ZASOBÓW/ADRES URL
+user data protocol (UDP) - DATAGRAMOWY PROTOKÓŁ UŻYTKOWNIKA
+webpage – PODSTRONA INTERNETOWA
+website – WITRYNA SIECI WWW/STRONA INTERNETOWA
+wide are information server (WAIS) - SERWER INFORMACYJNY W SIECIACH ROZLEGŁYCH
+wire - PRZEWÓD
+world wide web - OGÓLNOŚWIATOWA SIEĆ WWW
+
