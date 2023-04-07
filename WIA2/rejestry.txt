@@ -1,0 +1,68 @@
+AX (ang. Accumulator)
+
+	Wykorzystywany głównie do operacji arytmetycznych i logicznych.
+	Można go traktować jako złożenie 8-bitowych rejestrów AH i AL (high, low).
+	Przykładowo jeżeli w rejestrze AH jest wartość 56H, a w rejestrze AL 4BH,
+	to w całym rejestrze AX jest wartość 56H4BH.
+
+BX (ang. Base Register)
+
+	Rejestr bazowy, głównie wykorzystywany przy adresowaniu pamięci. 
+	Dzieli się na BH i BL.
+
+CX (ang. Counter Register)
+
+	W wielu instrukcjach wykorzystywany jako licznik.
+	Dzieli się na CH i CL.
+
+DX (ang. Data Register) 
+	
+	Rejestr danych wykorzystywany przy operacjach mnożenia i dzielenia,
+	a także do wysyłania i odbierania danych z portów.
+	Dzieli się na DH i DL.
+
+SI (ang.  Source Index) 
+
+	Rejestr indeksujący pramięć oraz wskazujący obszar Z którego przesyła się dane.
+
+DI (ang. Destination Index)
+
+	Rejestr indeksujący pramięć oraz wskazujący obszar DO którego przesyła się dane.
+
+SP (ang. Stack Pointer) Wskaźnik stosu.
+BP (ang. Base Pointer) Rejestr używany do adresowania pamięci.
+
+IP (ang. Instruction Pointer) nie jest bezpośrednio osiągalny przez programiste.
+
+	Zawiera on adres (numer pamięci) aktualnie wykonywanej instrukcji.
+	Może być modyfikowany tylko przez rozkazy sterujące pracą programu.
+
+Pamięć jest podzielona na segmenty:
+
+CS (ang. Code Segment) rejest zawierający segment aktualnie wykonywanego rozkazu.
+DS (ang. Data Segment) rejest zawierający segment z danymi.
+ES (ang. Extra Segment) rejest zawierający segment np. przy operacjach przesyłania łańcuchów.
+SS (ang. Stack Segment) rejest zawierający segment stosu.
+
+Rejestr znaczników - nie można odwołać się do niego w sposób bezpośredni. 
+Jest to właściwie 9 pojedyńczych bitów informujących o stanie procesora.
+Część z nich można ustawiać, część tylko odczytywać. 
+Instrukcje sterujące programem mogą sie różnie zachowywać w zależności od stanu poszczególnych znaczników.
+Położenie i znaczenie znaczników jest następujące:
+
+	| | | | |O|D|I|T|S|Z| |A| |P| |C|
+
+OF (ang. Overflow flag) Znacznik nadmiaru, ustawiany przy wystąpieniu nadmiaru operacjach arytmetycznych.
+DF (ang. Direction flag) Znacznik kierunku, określa czy dane będą przesyłane w kolejności adresów rosnących czy malejących.
+IF (ang. Interrupt flag) Znacznik zezwolenia na przerwanie, określa, czy przerwanie sprzętowe ma być wykonane bezpośrednio po zgłoszeniu, czy dopiero po skończeniu wykonywanego programu.
+TF (ang. Trap flag) Znacznik pracy korkowej. Określa czy po każdej wykonanej instukcji procesora wywołane jest przerwanie pracy korkowej.
+SF (ang. Sign flag) Znacznik znaku. Zawiera znak wyniku ostatnio wykonywanej operacji arytmetycznej.
+ZF (ang. Zero flag) Znacznik zera. Ustawiany jeśli wynikiem ostatniej operacji arytmetycznej było zero.
+AF (ang. Auxiliary Carry flag) Znacznik przeniesienia powłokowego.
+PF (ang. Parity flag) Znacznik parzystości.
+CF (ang. Carry flag) Znacznik przeniesienia.
+	
+
+
+
+	
