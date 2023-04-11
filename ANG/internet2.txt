@@ -1,7 +1,7 @@
 (to) abort - ZOSTAĆ PRZERWANYM, PRZERWAĆ 
 adware – OPROGRAMOWANIE REKLAMOWE 
 backup – KOPIA ZAPASOWA 
-bandwidth -  
+bandwidth -  PRZEPUSTOWOŚĆ ŁĄCZA
 broadband – INTERNET SZEROKOPASMOWY  
 browser - PRZEGLĄDARKA 
 (to) buffer - BUFOROWAĆ SIĘ 
