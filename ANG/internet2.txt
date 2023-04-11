@@ -1,0 +1,47 @@
+(to) abort - ZOSTAĆ PRZERWANYM, PRZERWAĆ 
+adware – OPROGRAMOWANIE REKLAMOWE 
+backup – KOPIA ZAPASOWA 
+bandwidth -  
+broadband – INTERNET SZEROKOPASMOWY  
+browser - PRZEGLĄDARKA 
+(to) buffer - BUFOROWAĆ SIĘ 
+bug - BŁĄD W PROGRAMIE 
+(to) compile - SKŁADAĆ, SPORZĄDZAĆ, ZESTAWIAĆ 
+(to) compress - PAKOWAĆ, KOMPRESOWAĆ 
+croudfunding site – PORATAL DO INTERNETOWYCH ZBIÓREK PIENIĘDZY 
+dashboard – PANEL STEROWANIA 
+directory – KATALOG 
+disc array – MACIERZ DYSKOWA, URZĄDZENIE ZAWIERAJĄCE KILKA, KILKASET DYSKÓW (RAID) 
+drive – DYSK, NAPĘD 
+drop-down menu – MENU ROZWIJANE 
+edutainment – EDUKACJA ROZRYWKOWA, GRY EDUKACYJNE 
+(to) embed - WBUDOWAĆ, OSADZIĆ 
+encryption – SZYFROWANIE 
+extensible – ROZSZERZALNY 
+firewall – ZAPORA SIECIOWA (OGNIOWA) 
+gateway – BRAMA SIECIOWA 
+(to) hook up to - PODPIĄĆ, PODŁĄCZYĆ SIĘ DO 
+hyperlink - HIPERŁĄCZE 
+indicator light – KONTROLKA 
+instantaneous – NATYCHMIASTOWY 
+intranet - SIEĆ WEWNĘTRZNA 
+netiquette – NETYKIETA (ZBIÓR ZASAD DOTYCZĄCY DOBREGO ZACHOWANIA W INTERNECIE) 
+(to) notify – POWIADAMIAĆ 
+(to) paste – WKLEJAĆ 
+pending – W TOKU, OCZEKUJĄCY NA AKCEPTACJE 
+plagiarism – PLAGIAT, PLAGIATOWAĆ 
+(to) pop up - WYSKAKIWAĆ 
+power adapter – ZASILACZ 
+(to) refine - UDOSKONALAĆ 
+resolution - ROZDZIELCZOŚĆ 
+(to) retrieve - ODZYSKIWAĆ 
+screensaver – WYGASZACZ EKRANU 
+screenshot – ZRZUT EKRANU 
+software – OPROGRAMOWANIE, PROGRAM 
+spreadsheet – ARKUSZ KALKULACYJNY 
+(to) stream - STREAMOWAĆ, STRUMIENIOWAĆ 
+thread - WĄTEK 
+toolbar – PASEK NARZĘDZI 
+(to) troubleshoot - DIAGNOZOWAĆ I USUWAĆ PROBLEM, ROZWIĄZYWAĆ PROBLEMY 
+typeface - KRÓJ CZCIONKI 
+wireless - BEZPRZEWODOWY
