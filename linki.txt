@@ -1,7 +1,0 @@
-skoki:
-
-https://pl.wikibooks.org/wiki/Asembler_x86/Instrukcje/Skokowe#Warunek
-
-przerwania:
-
-http://www.ctyme.com/intr/int.htm
