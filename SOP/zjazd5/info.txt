@@ -1,0 +1,51 @@
+POJĘCIE PROCESU
+Procesem nazywamy instancję programu w trakcie wykonywania. Każdy proces zajmuje własną przestrzeń
+adresową i wykonuje w niej określone w swoim kodzie instrukcje.
+Proces składa się z:
+-  kodu programu (sekcja tekstu)
+-  licznika rozkazów
+-  zawartości rejestrów procesora
+-  stosu procesu (przechowuje dane tymczasowe)
+-  sekcji danych (przechowuje zmienne globalne)
+Proces może znaleźć się w następujących stanach:
+-  nowy – proces utworzony
+-  aktywny – trwa wykonywanie instrukcji
+-  gotowy – czeka na przydział procesora
+-  czekający – czeka na zakończenie jakiegoś zdarzenia
+-  zakończony – proces zakończył działanie
+
+Atrybuty procesu
+Numery identyfikacyjne procesu
+▪ Każdy proces jest identyfikowany przez unikalny numer ID procesu (process ID, PID). PID to (najczęściej)
+16-bitowy numer przydzielany przez system podczas tworzenia procesu. Każdy proces posiada również swój
+"parent process" (poza jednym - init). Dlatego można wyobrazić sobie procesy w systemie jako drzewo, w
+którym korzeniem jest właśnie init. ID takie procesu to parrent process ID, PPID
+▪ Kiedy odnosimy się do procesu w językach C/C++, używamy typu pid_t, zdefiniowanego w
+<sys/types.h>. W naszym programie możemy uzyskać PID procesu używając funkcji systemowej
+getppid(). Możemy również uzyskać PPID dzięki funkcji getpid(). Funkcje te możemy wywoływać po
+wcześniejszym zainkludowaniu <unistd.h>.
+
+
+KOMPILACJA:
+gcc -std=c99 zadanie1.c -o zadanie1
+(std=c99 – standard języka C ISO99 https://gcc.gnu.org/c99status.html)
+
+Pliki źródłowe Linuxa:
+o kernel/fork.c - definicja funkcji do_fork() oraz wykorzystywanych przez nią
+funkcji pomocniczych,
+o include/linux/sched.h - definicje wszystkich najważniejszych z punktu
+widzenia zarządzania procesami struktur i makr, w tym struktury task_struct, makr
+SET_LINKS, REMOVE_LINKS itp.
+o include/linux/tasks.h - definicje stalych odpowiadających za ograniczenia na
+liczbę uruchomionych procesów;
+o include/linux/errno.h  - kody błędów systemowych.
+-  Linux Manual
+o fork (man fork),
+o clone (man clone).
+-  Maurice J. Bach: Budowa systemu operacyjnego UNIX, wyd. II, WNT 1995.
+-  Tour of the Linux kernel source by Alessandro Rubini (aktualnie niedostępny w sieci).
+-  Zarzadzanie procesami w systemie Linux mgr. inż Arkadiusz Adolph
+-  Projekt Linux - zwłaszcza rozdział dotyczący algorytmu fork autorstwa Tomasza Błaszczyka.
+
+PRZYDATNE LINKI:
+http://students.mimuw.edu.pl/SO/LabLinux/PROCESY/index.html
