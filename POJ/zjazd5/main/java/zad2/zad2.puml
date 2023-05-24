@@ -1,0 +1,21 @@
+@startuml
+class zad2.MovablePoint {
+- int x
+- int y
++ String toString()
++ void moveUp()
++ void moveDown()
++ void moveLeft()
++ void moveRight()
+}
+interface zad2.Movable {
+~ MovablePoint mp
+~ {static} void moveUp()
+~ {static} void moveDown()
+~ {static} void moveLeft()
+~ {static} void moveRight()
+}
+
+
+zad2.Movable <|.. zad2.MovablePoint
+@enduml
