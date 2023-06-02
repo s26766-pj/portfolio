@@ -1,0 +1,254 @@
+Jaka jest różnica miedzy ścieżką relatywną, a absolutną? Podaj także przykład.
+	
+1. Różnica między ścieżką relatywną a absolutną:
+   - Ścieżka relatywna: Jest to ścieżka, która jest określana względem bieżącego katalogu roboczego lub innego punktu odniesienia. Oznacza to, że ścieżka relatywna zależy od kontekstu i nie jest niezależna od konkretnej lokalizacji. Na przykład, jeśli bieżący katalog roboczy to "/home/user/", to ścieżka relatywna "documents/file.txt" oznacza plik "file.txt" w podkatalogu "documents" w bieżącym katalogu.
+   - Ścieżka absolutna: Jest to pełna ścieżka do pliku lub katalogu, zaczynająca się od najwyższego poziomu w drzewie systemu plików. Ścieżka absolutna nie zależy od kontekstu i zawsze wskazuje na tę samą lokalizację niezależnie od bieżącego katalogu roboczego. Na przykład, "/home/user/documents/file.txt" to ścieżka absolutna do pliku "file.txt" w katalogu "documents" w katalogu użytkownika "user".
+
+Do czego służy licznik otwarć pliku?
+	
+2. Licznik otwarć pliku: Licznik otwarć pliku to mechanizm używany przez system operacyjny do śledzenia liczby procesów, które aktualnie mają otwarty dostęp do danego pliku. Każde otwarcie pliku przez proces zwiększa licznik o jeden, a zamknięcie go zmniejsza licznik. Licznik otwarć pliku jest przydatny w zarządzaniu dostępem do plików, ponieważ pozwala systemowi operacyjnemu na kontrolowanie, czy plik jest używany przez inne procesy, i podejmowanie odpowiednich działań w przypadku konfliktów.
+
+Jaki typ plików jest bezpośrednio obsługiwany przez praktycznie każdy system operacyjny?
+	
+3. Typ plików obsługiwanych przez praktycznie każdy system operacyjny: Tekstowe pliki ASCII lub Unicode (np. pliki tekstowe w formacie .txt). Te pliki zawierają zwykły tekst i mogą być odczytywane i edytowane przez większość systemów operacyjnych oraz aplikacje.
+
+Co to jest biblioteka współdzielona?
+	
+4. Biblioteka współdzielona: Biblioteka współdzielona (znana również jako biblioteka dynamiczna lub DLL - Dynamic Link Library) jest plikiem zawierającym gotowy do użycia kod programu, który może być współdzielony przez wiele programów. Biblioteki współdzielone zawierają funkcje, które mogą być wywoływane przez programy, a ich kod jest ładowany w czasie wykonywania programu. Biblioteki współdzielone są istotne w celu uniknięcia duplikacji kodu i umożliwienia efektywnego wykorzystania zasobów systemowych.
+
+Z jakiego powodu stosuje się biblioteki współdzielone?
+	
+5. Powody stosowania bibliotek współdzielonych:
+   - Reużywalność kodu: Biblioteki współdziel
+
+one umożliwiają wielokrotne wykorzystanie kodu programu przez wiele aplikacji, co prowadzi do oszczędności czasu i zasobów.
+   - Oszczędność miejsca na dysku: Ponieważ biblioteki współdzielone są używane przez wiele aplikacji, tylko jedna kopia biblioteki musi być przechowywana na dysku, co pozwala zaoszczędzić miejsce.
+   - Aktualizacje i łatki: Jeśli biblioteka współdzielona wymaga aktualizacji lub poprawek, wystarczy zaktualizować ją w jednym miejscu, a zmiany zostaną wprowadzone we wszystkich aplikacjach korzystających z tej biblioteki.
+
+Wymień jakie znasz metody komunikacji międzyprocesowej.
+	
+6. Metody komunikacji międzyprocesowej:
+   - Potoki (pipes)
+   - Kolejki komunikatów (message queues)
+   - Semafory
+   - Sygnały
+   - Pamięć współdzielona (shared memory)
+   - Gniazda (sockets)
+   - RPC (Remote Procedure Call - zdalne wywoływanie procedur)
+
+Co to jest pamięć współdzielona (shared memory)
+
+7. Pamięć współdzielona (shared memory): Pamięć współdzielona to mechanizm komunikacji międzyprocesowej, który umożliwia kilku procesom dostęp do wspólnej przestrzeni pamięci. Procesy mogą odczytywać i zapisywać dane w tej wspólnej pamięci, co umożliwia szybką i efektywną wymianę informacji między procesami. Pamięć współdzielona jest jednym z najbardziej wydajnych sposobów komunikacji międzyprocesowej.
+
+Co to jest PID?
+
+8. PID (Process ID): PID to unikalny identyfikator przypisywany każdemu procesowi w systemie operacyjnym. Jest to liczba całkowita, która jednoznacznie identyfikuje proces w systemie. PID jest przydany do monitorowania i zarządzania procesami, a także do nawiązywania komunikacji międzyprocesowej.
+
+	
+Co to jest PPID?
+	
+9. PPID (Parent Process ID): PPID to identyfikator procesu nadrzędnego (rodzica) danego procesu. Oznacza to PID procesu, który utworzył dany proces. PPID jest przydatny w hierarchii procesów i może być używany do zarządzania procesami potomnymi.
+
+Do czego służą sygnały?
+
+10. Sygnały: Sygnały są mechanizmem używanym w systemach operacyjnych do komunikacji międzyprocesowej. Sygnały służą do przekazywania informacji lub zgłaszania określonych zdarzeń między procesami lub pomiędzy systemem operacyjnym a procesem. Sygnały mogą być używane do zatrzymywania, wznowienia, przerwania lub wykonania innych działań związanych z procesem. Sygnały mogą być generowane przez system operacyjny, inne procesy lub użytkownika.
+	
+Jak wygląda schemat producent - konsument?
+
+11. Schemat producent-konsument: Schemat producent-konsument jest popularnym wzorcem synchronizacji w systemach operacyjnych. Producent generuje dane i umieszcza je w buforze, a konsument pobiera te dane z bufora i je przetwarza. Wzorzec ten zapewnia synchronizację między producentem a konsumentem, aby uniknąć sytuacji, w której producent próbuje umieścić dane w pełnym buforze lub konsument próbuje pobrać dane z pustego bufora.
+
+Wyjaśnij (na jakimś przykładzie) sytuację wyścigu.
+
+12. Sytuacja wyścigu: Sytuacja wyścigu występuje, gdy dwa lub więcej procesów lub wątków jednocześnie próbuje uzyskać dostęp do wspólnego zasobu lub wykonuje operacje w nieprzewidywalnej kolejności. Sytuacja ta może prowadzić do niepoprawnych wyników lub nieprzewidywalnego zachowania programu. Na przykład, jeśli dwa wątki równocześnie próbują zapisywać dane do tej samej zmiennej, wynikowy stan tej zmiennej może być nieprzewidywalny.
+
+W jaki sposób rozwiązuje się problem sytuacji wyścigu?
+	
+13. Rozwiązanie problemu sytuacji wyścigu: Problem sytuacji wyścigu można rozwiązać za pomocą mechanizmów synchronizacji, takich jak sekcje krytyczne, semafory lub mutexy. Te mechanizmy zapewniają, że tylko jeden proces lub wątek może jednocześnie mieć dostęp do chronionego zasobu, eliminując w ten sposób możliwość sytuacji wyścigu.
+
+Do czego służy sekcja krytyczna?
+	
+14. Sekcja krytyczna: Sekcja krytyczna to fragment kodu, w którym proces lub wątek korzysta z wspólnego zasobu lub wykonuje operacje, które muszą być wykonane atomowo. Sekcja krytyczna musi być odpowiednio zabezpieczona, aby tylko jeden proces lub wątek mógł jednocześnie mieć do niej dostęp.
+
+W jaki sposób można zrealizować sekcję mutex?
+
+15. Realizacja sekcji krytycznej za pomocą mutexu: Mutex (skrót od mutual exclusion - wzajemne wykluczanie) jest mechanizmem synchronizacji, który służy do zapewnienia, że tylko jeden proces lub wątek może jednocześnie wejść do sekcji krytycznej. Proces lub wątek próbuje zablokować mutex przed wejściem do sekcji krytycznej, a po zakończeniu pracy zwalnia mutex, umożliwiając innym procesom lub wątkom dostęp do sekcji krytycznej.
+
+Co to jest mutex?
+
+16. Mutex: Mutex (lub semafor binarny) jest mechanizmem synchronizacji, który służy do zapewnienia wzajemnego wykluczania, czyli że tylko jeden proces lub wątek może jednocześnie uzyskać dostęp do chronionego zasobu lub wejść do sekcji krytycznej. Mutex może być używany do rozwiązania problemu sytuacji wyścigu i zapewnienia spójności danych.
+
+Co to jest semafor?
+
+17. Semafor: Semafor to mechanizm synchronizacji, który służy do kontrolowania dostępu do zasobów w środowisku wieloprocesorowym lub wielowątkowym. Semafor składa się z licznika i operacji, które mogą zwiększać (V - sygnał) lub zmniejszać (P - oczekiwanie) wartość tego licznika. Semafor może mieć wartość licznika większą lub równą zero. Jeśli wartość semafora jest większa niż zero, to oznacza, że zasób jest dostępny. Jeśli wartość semafora jest równa zero, to oznacza, że zasób jest zajęty i inne procesy lub wątki muszą oczekiwać na zwolnienie zasobu.
+
+Do czego może służyć semafor?
+
+18. Zastosowanie semafora: Semafor może być używany do synchronizacji dostępu do zasobów, zapewniania wzajemnego wykluczania lub kontrolowania kolejności wykonywania operacji między procesami lub wątkami. Może być również stosowany do rozwiązania problemów producenta-konsumenta, czytelników i pisarzy, czy problemu ucztujących filozofów.
+
+Co to jest sytuacja zagłodzenia (w kontekście systemów operacyjnych)?
+
+19. Sytuacja zagłodzenia: Sytuacja zagłodzenia występuje, gdy proces nie jest w stanie uzyskać potrzebnych zasobów, ponieważ inne procesy w systemie ciągle zajmują te zasoby. W rezultacie proces znajduje się w nieskończonej pętli oczekiwania, nie wykonując swojej pracy. Sytuacja zagłodzenia może wystąpić w systemie, gdy mechanizmy alokacji zasobów są niewłaściwie zarządzane.
+
+Co to jest zakleszczenie? Podaj przykład.
+
+20. Zakleszczenie: Zakleszczenie (deadlock) występuje, gdy dwa lub więcej procesów lub wątków wzajemnie blokują się, oczekując na zasoby, które są w posiadaniu innych procesów lub wątków. W rezultacie żaden z tych procesów lub wątków nie może kontynuować swojego działania. Przykładem zakleszczenia może być sytuacja, w której proces A czeka na zasób, który jest w posiadaniu procesu B, a proces B czeka na zasób, który jest w posiadaniu procesu A.
+	
+Opisz jak wygląda problem jedzących filozofów?
+	
+21. Problem jedzących filozofów: Problem jedzących filozofów to klasyczny problem synchronizacji, w którym grupa filozofów siedzi przy okrągłym stole, a między każdymi dwoma filozofami leży pałeczka. Filozofowie mogą być w jednym z dwóch stanów: jedzeniu lub myśleniu. Każdy filozof musi podnieść dwie pałeczki, aby móc jeść, ale pałeczki są współdzielone między sąsiadującymi filozofami. Problem polega na zaprojektowaniu algorytmu, który zapewni, że żaden filozof nie umrze z głodu i że nie wystąpią sytuacje wyścigu lub zakleszczenia.
+
+Opisz co się stanie, jeśli w problemie jedzących filozofów każdy filozof zechce jeść i podniesie najpierw * prawą pałeczkę?
+
+22. Jeśli każdy filozof zechce jeść i podniesie najpierw prawą pałeczkę: Jeśli każdy filozof podniesie najpierw prawą pałeczkę, żaden z nich nie będzie w stanie podnieść lewej pałeczki, ponieważ każda z pałeczek musi być podniesiona przez dwa sąsiadujące filozofów, aby można było jeść. W rezultacie filozofowie będą czekać w nieskończoność na swoją lewą pałeczkę, co prowadzi do zagłodzenia.
+
+Opisz co się stanie, jeśli w problemie jedzących filozofów każdy filozof zechce jeść i podniesie najpierw * lewą pałeczkę?
+	
+23. Jeśli każdy filozof zechce jeść i podniesie najpierw lewą pałeczkę: W tej sytuacji filozofowie podniosą swoje lewe pałeczki, ale nie będą w stanie podnieść prawych pałeczek, ponieważ są one zajęte przez sąsiadujących filozofów. Filozofowie będą czekać w nieskończoność na prawe pałeczki, co również prowadzi do zagłodzenia.
+
+Co trzeba zrobić, aby zablokować wyłączenie programu konsolowego w momencie wciśnięcia Ctrl+C?
+
+24. Aby zablokować wyłączenie programu konsolowego w momencie wciśnięcia Ctrl+C, można obsłużyć sygnał SIGINT (przerwanie) w programie. W języku C można użyć funkcji signal() lub sigaction() do zdefiniowania funkcji obsługi sygnału i zablokowania jego domyślnego działania.
+
+Do czego można wykorzystać obsługę sygnałów?
+
+25. Obsługa sygnałów może być wykorzystana do reagowania na różne zdarzenia, takie jak przerwania, błędy, zakończenie programu itp. Sygnały pozwalają programowi na komunikację z systemem operacyjnym lub innymi procesami, informując o wystąpieniu pewnego zdarzenia. Program może zarejestrować funkcję obsługi sygnału, która zostanie wywołana, gdy sygnał zostanie odebrany.
+
+Na czym polega "problem czytelników i pisarzy"?
+
+26. Problem czytelników i pisarzy: Problem czytelników i pisarzy dotyczy dostępu do wspólnej bazy danych przez wielu czytelników i pisarzy. Czytelnicy mogą jedynie odczytywać dane, podczas gdy pisarze mogą zarówno odczytywać, jak i zapisywać dane. Problem polega na zaprojektowaniu algorytmu, który zapewni, że czytelnicy i pisarze będą mieli odpowiedni dostęp do bazy danych, unikając sytuacji wyścigu i zagłodzenia.
+
+Jak rozumiesz pojęcia pamięci wirtualnej?
+
+27. Pamięć wirtualna to technika zarządzania pamięcią w systemach operacyjnych. Polega na przydzielaniu procesom większej przestrzeni adresowej, niż jest dostępna w rzeczywistej pamięci fizycznej. Część przestrzeni adresowej procesu jest przechowywana w pamięci wirtualnej, a część na dysku twardym.
+
+Do czego służy pamięć wirtualna?
+
+28. Pamięć wirtualna służy do umożliwienia procesom korzystania z większej przestrzeni adresowej, niż jest dostępna w pamięci fizycznej. Dzięki temu programy mogą być większe od dostępnej pamięci fizycznej i mogą efektywnie zarządzać swoją pamięcią. Pamięć wirtualna pozwala również na współdzielenie stron pamięci między różnymi procesami oraz umożliwia korzystanie z technik takich jak stronicowanie i wymiana stron.
+
+Jakie mechanizmy sprzętowe i programowe umożliwiają obsługę pamięci wirtualnej?
+
+29. Obsługę pamięci wirtualnej umożliwiają zarówno mechanizmy sprzętowe, takie jak pamięć wirtualna w procesorze, jak i mechanizmy programowe, takie jak system plików stronnicowania i algorytmy zarządzania pamięcią wirtualną w systemie operacyjnym.
+
+Co to jest stronicowanie na żądanie?
+
+30. Stronicowanie na żądanie (demand paging) to technika zarządzania pamięcią wirtualną, w której strony pamięci są ładowane do pamięci fizycznej tylko wtedy, gdy są faktycznie potrzebne. Gdy proces odwołuje się do strony, która nie jest obecna w pamięci fizycznej, następuje błąd strony i system operacyjny ładowa stronę z dysku do pamięci fizycznej. Dzięki temu technikowi oszczędza się pamięć fizyczną i umożliwia obsługę większych przestrzeni adresowych niż jest dostępna w pamięci RAM.
+	
+Jak można zrealizować stronicowanie na żądanie?
+	
+41. Stronicowanie na żądanie można zrealizować poprzez podział przestrzeni adresowej procesu na strony o ustalonej wielkości. Strony te są ładowane do pamięci fizycznej tylko wtedy, gdy są potrzebne. Gdy proces odwołuje się do strony, która nie jest obecna w pamięci fizycznej, następuje błąd strony, a system operacyjny ładowa stronę z dysku do pamięci fizycznej.
+
+Na czym polega kopiowanie przy zapisie?
+
+42. Kopiowanie przy zapisie (copy-on-write) to technika, w której dwie lub więcej strony pamięci fizycznej dzielą tę samą stronę pamięci wirtualnej. Gdy proces zapisuje do współdzielonej strony, następuje kopiowanie tej strony, aby każdy proces miał swoją własną kopię. Dzięki temu unika się konieczności niepotrzebnego kopiowania danych, gdy procesy tylko czytają dane, ale nie zapisują do nich.
+
+Co się stanie, jeśli system będzie wykonywał zbyt wiele wymagających dużo pamięci procesów? Jak się nazywa * zjawisko, które wtedy się pojawi?
+
+43. Jeśli system będzie wykonywał zbyt wiele procesów wymagających dużej ilości pamięci, może dojść do wyczerpania dostępnej pamięci fizycznej. W takiej sytuacji system operacyjny musi korzystać z technik takich jak wymiana stron (page swapping) lub stronicowanie na dysku (paging to disk), aby przenieść nieaktywne strony pamięci na dysk i zwolnić miejsce dla aktywnych stron. Zjawisko, które występuje w przypadku braku wystarczającej pamięci fizycznej i konieczności korzystania z dysku jako rozszerzonej pamięci, nazywane jest nadmiernym wymienianiem stron (page thrashing).
+
+Czy kolejka nazwana FIFO (reprezentowana przez plik w systemie plików) będzie działała na zdalnym systemie * plików?
+	
+44. Kolejka nazwana FIFO (First-In-First-Out), reprezentowana przez plik w systemie plików, nie będzie działała na zdalnym systemie plików, ponieważ komunikacja przez sieć zwiększa opóźnienia i nie zapewnia natychmiastowego dostępu do pliku. Kolejka nazwana FIFO działa lokalnie na jednym systemie operacyjnym, gdzie procesy mogą odczytywać i zapisywać do niej.
+
+Kiedy może następować wiązanie adresów?
+
+45. Wiązanie adresów może następować w różnych momentach procesu. Może to być statyczne wiązanie, w którym adresy są przypisywane podczas kompilacji lub ładowania programu. Może to być także dynamiczne wiązanie, w którym adresy są przypisywane podczas uruchamiania programu lub w trakcie jego działania.
+
+Co to jest adres bezwzględny?
+	
+46. Adres bezwzględny (ang. absolute address) to adres, który identyfikuje unikalne miejsce w pamięci fizycznej komputera. Jest to konkretny, fizyczny adres pamięci.
+
+Co to jest adres względny? Co on tworzy?
+	
+47. Adres względny (ang. relative address) to adres, który odnosi się do określonego punktu odniesienia, na przykład początku bloku pamięci lub segmentu. Adres względny jest wykorzystywany w celu odwoływania się do pamięci wewnątrz danego obszaru lub segmentu. Adres względny tworzy odległość (przesunięcie) od punktu odniesienia.
+
+Jaka jednostka w komputerze służy do tłumaczenia adresów logicznych na fizyczne?
+
+48. Jednostka w komputerze, która służy do tłumaczenia adresów logicznych na fizyczne, to jednostka zarządzania pamięcią (MMU - Memory Management Unit). MMU realizuje mapowanie między przestrzenią adresową procesu a fizyczną pamięcią RAM, obsługując mechanizmy takie jak stronicowanie, tablice stron i cache tłumaczeń adresowych.
+
+W jakich sytuacjach program uruchomiony w systemie operacyjnym korzysta z adresów fizycznych? % tu jest * haczyk - nigdy
+
+49. Programy uruchomione w systemie operacyjnym zwykle korzystają z adresów logicznych. Adresy fizyczne są bardziej istotne na poziomie systemu operacyjnego i sprzętu, gdzie operacje takie jak zarządzanie pamięcią, stronicowanie i wymiana stron odnoszą się bezpośrednio do fizycznej pamięci RAM.
+	
+Jakie znasz dwa tryby działania procesora (w kontekście uprawnień i systemów operacyjnych)?
+
+50. Dwa tryby działania procesora w kontekście uprawnień i systemów operacyjnych to tryb użytkownika (user mode) i tryb jądra (kernel mode). Tryb użytkownika jest trybem, w którym działa większość aplikacji użytkownika. Procesy w trybie użytkownika mają ograniczone uprawnienia dostępu do zasobów systemowych i nie mogą wykonywać pewnych operacji, które są zarezerwowane dla trybu jądra. Tryb jądra jest bardziej uprzywilejowany i umożliwia bezpośredni dostęp do zasobów systemowych oraz wykonanie operacji, które wymagają większych uprawnień, takich jak zarządzanie pamięcią czy obsługa sprzętu.
+	
+Czy proces w trybie użytkownika może zażądać dostępu do dowolnego adresu pamięci?
+
+51. Proces w trybie użytkownika może zażądać dostępu tylko do adresów pamięci, które są dozwolone i przypisane temu procesowi. Proces w trybie użytkownika ma ograniczone uprawnienia dostępu i nie może uzyskać dostępu do dowolnego adresu pamięci w systemie.
+
+Czy proces w trybie systemu może zażądać dostępu do dowolnego adresu pamięci?
+	
+52. Proces w trybie systemu (tryb jądra) ma pełne uprawnienia dostępu do wszystkich adresów pamięci w systemie. Może zażądać dostępu do dowolnego adresu pamięci, zarówno dla swojej przestrzeni adresowej, jak i dla przestrzeni innych procesów.
+
+Co to jest stronicowanie?
+
+53. Stronicowanie to technika zarządzania pamięcią wirtualną, w której pamięć fizyczna i przestrzeń adresowa procesu są podzielone na strony o ustalonej wielkości. Procesy odwołują się do stron pamięci na podstawie adresów logicznych, a system operacyjny tłumaczy te adresy na odpowiadające im adresy fizyczne.
+
+Co to jest segmentacja?
+
+54. Segmentacja to technika zarządzania pamięcią wirtualną, w której przestrzeń adresowa procesu jest podzielona na segmenty różnych rozmiarów. Każdy segment reprezentuje logiczną jednostkę informacji, taką jak kod programu, dane, stos itp. Segmentacja pozwala na elastyczne zarządzanie przestrzenią adresową i dostosowanie jej do potrzeb procesu.
+
+Do czego służy rejestr graniczny?
+
+55. Rejestr graniczny (limit register) to rejestr w procesorze, który przechowuje maksymalny adres logiczny, do którego proces ma dostęp. Służy do ochrony przed nieautoryzowanym dostępem do pamięci. Przy próbie dostępu do adresu poza zakresem określonym przez rejestr graniczny występuje błąd pamięci.
+
+Jaka jest różnica między tablicą statyczną a dynamiczną (w kontekście języka C)?
+
+56. Różnica między tablicą statyczną a dynamiczną w języku C polega na sposobie alokacji i zarządzania pamięcią. Tablica statyczna jest deklarowana na etapie kompilacji i ma stały rozmiar określony w momencie deklaracji. Tablica dynamiczna jest tworzona w czasie wykonania programu przy użyciu funkcji alokujących pamięć, takich jak malloc() lub calloc(). Rozmiar tablicy dynamicznej może być zmieniany w trakcie działania programu.
+
+Do czego służy program make?
+
+57. Program make to narzędzie do automatyzacji kompilacji i budowy programów. Umożliwia określenie zależności między plikami źródłowymi, tak aby tylko te pliki, które uległy zmianie, były rekompilowane. Program make oparty jest na plikach konfiguracyjnych (np. Makefile) zawierających reguły kompilacji i instrukcje budowy programu.
+
+Jak się ma program do procesu?
+
+58. Proces to egzekucja programu w systemie operacyjnym. Program jest pasywnym zbiorem instrukcji i danych, podczas gdy proces to aktywna instancja programu, która ma przypisane zasoby systemowe, takie jak pamięć, czas procesora, deskryptory plików itp.
+
+Co się składa na proces?
+	
+59. Proces składa się z przestrzeni adresowej, stanu procesu, wątków, stosu wywołań, deskryptorów plików, informacji o uprawnieniach, kontekstu rejestrowego i innych metadanych procesu.
+
+Przez jakie stany przechodzi proces?
+
+60. Proces przechodzi przez różne stany w trakcie swojego cyklu życia. Typowe stany procesu to: gotowy (ready), w trakcie wykonywania (running), czekający (waiting), zakończony (terminated) oraz zawieszony (suspended). Procesy mogą zmieniać stany w odpowiedzi na zdarzenia, takie jak żądania wejścia/wyjścia, przełączenie kontekstu czy oczekiwanie na zasoby.
+		
+Co może zawierać blok kontrolny procesu?
+	
+61. Blok kontrolny procesu może zawierać różne informacje związane z danym procesem, takie jak identyfikator procesu (PID), stan procesu, priorytet, stan rejestrów, wskaźniki stosu, deskryptory plików, informacje o planowaniu, informacje o zarządzaniu pamięcią, informacje o wątkach, czas CPU, liczniki wykonywanych instrukcji itp. Blok kontrolny procesu jest przechowywany w systemie operacyjnym i jest aktualizowany i odczytywany przez planistę (scheduler) i inne komponenty systemu operacyjnego.
+
+Jak się ma termin "obliczenia równoległe" do "obliczeń współbieżnych"?	
+
+62. Obliczenia równoległe i obliczenia współbieżne dotyczą wykonywania zadań jednocześnie. Obliczenia równoległe odnoszą się do równoczesnego wykonywania zadań na wielu procesorach lub rdzeniach w celu przyspieszenia obliczeń. Obliczenia współbieżne odnoszą się do równoczesnego wykonywania zadań w ramach jednego procesora lub rdzenia przy użyciu mechanizmów takich jak wątki, asynchroniczność, synchronizacja itp. Obliczenia współbieżne mogą być realizowane na jednym procesorze przy wykorzystaniu przeskakiwania między zadaniami w krótkich interwałach czasowych.
+
+Na czym polega przełączanie kontekstu?
+	
+63. Przełączanie kontekstu polega na zmianie aktywnego kontekstu procesora z jednego procesu na inny. W momencie przełączania kontekstu, bieżący stan procesu, takie jak zawartość rejestrów, wskaźniki stosu itp., jest zapisywany w bloku kontrolnym procesu, a następnie przywracany dla nowego procesu. Przełączanie kontekstu jest wykonywane przez system operacyjny w celu umożliwienia wielozadaniowości i wykonywania wielu procesów jednocześnie.
+
+Czym zajmuje się planista (scheduler)?
+
+64. Planista (scheduler) jest odpowiedzialny za decydowanie, który proces będzie wykonywany w danym momencie. Planista analizuje dostępne procesy, ich priorytety, stan, obciążenie systemu itp. i podejmuje decyzję, który proces ma zostać wykonany i na jak długo. Planista zarządza czasem procesora i ustala harmonogram wykonywania procesów, zapewniając sprawiedliwe i efektywne wykorzystanie zasobów systemowych.
+
+Co to znaczy ,,wyekspediowanie procesu'' (process dispatch)?
+	
+65. Wyekspediowanie procesu (process dispatch) to proces rozpoczęcia wykonania procesu przez planistę. Gdy proces zostaje wybrany do wykonania, jego blok kontrolny zostaje przygotowany, a odpowiednie zasoby, takie jak czas procesora, pamięć itp., są przydzielane procesowi. Następnie proces zostaje uruchomiony i rozpoczyna swoje wykonywanie.
+
+Jaki mechanizm sprzętowy pozwala na przełączanie kontekstu?
+
+66. Mechanizm sprzętowy, który pozwala na przełączanie kontekstu, to zegar systemowy (system clock) lub przerwania sprzętowe. Zegar systemowy generuje regularne impulsy, które służą jako podstawowy sygnał dla planisty do przełączania kontekstu. Przerwania sprzętowe mogą również inicjować przełączanie kontekstu w odpowiedzi na określone zdarzenia sprzętowe, takie jak zakończenie operacji wejścia/wyjścia.
+
+Co to znaczy "proces ograniczony przez wejście-wyjście"?
+
+67. Proces ograniczony przez wejście-wyjście (I/O-bound process) to proces, który często oczekuje na zakończenie operacji wejścia/wyjścia. Taki proces spędza większość czasu na wykonywaniu operacji wejścia/wyjścia i jest ograniczany przez prędkość urządzeń wejścia/wyjścia, a nie przez moc obliczeniową procesora.
+
+Co to znaczy "proces ograniczony przez procesor"?
+	
+68. Proces ograniczony przez procesor (CPU-bound process) to proces, który wykorzystuje dużo czasu procesora na wykonywanie obliczeń. Taki proces intensywnie korzysta z mocy obliczeniowej procesora i jest ograniczany przez jego wydajność, a nie przez operacje wejścia/wyjścia.
+
+Jakie są etapy prowadzące od kodu źródłowego w C do programu wykonywalnego?
+
+69. Etapy prowadzące od kodu źródłowego w języku C do programu wykonywalnego obejmują: pisanie kodu źródłowego, kompilację kodu źródłowego do kodu obiektowego, łączenie kodu obiektowego w jeden plik wykonywalny oraz wykonanie programu wykonywalnego.
+
+Co się dzieje w momencie linkowania (w kontekście kompilacji programu do kodu wykonywalnego)?
+
+70. W momencie linkowania, kompilator łączy różne moduły kodu źródłowego oraz biblioteki zewnętrzne, tworząc pojedynczy plik wykonywalny. Proces linkowania polega na rozwiązywaniu odwołań do symboli, które występują w różnych częściach programu, oraz na łączeniu ich w spójną całość. W wyniku linkowania otrzymuje się program wykonywalny, który może być uruchomiony w systemie operacyjnym.
