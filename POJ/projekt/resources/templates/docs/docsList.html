@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout (~{::body},'docs')}">
+
+<body>
+
+<h2>Doctors</h2>
+
+<table id="docs" class="table table-striped">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Specialties</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="doc : ${listDocs}">
+    <td>
+      <a th:href="@{/docs/__${doc.id}__}" th:text="${doc.firstName + ' ' + doc.lastName}"></a>
+    </td>
+
+    <td><span th:each="specialty : ${doc.specialties}"
+              th:text="${specialty.name + ' '}"></span></td>
+  </tr>
+  </tbody>
+</table>
+
+<div th:if="${totalPages > 1}">
+  <span>Pages:</span>
+  <span>[</span>
+  <span th:each="i: ${#numbers.sequence(1, totalPages)}">
+      <a th:if="${currentPage != i}" th:href="@{'/docs?page=' + ${i}}">[[${i}]]</a>
+      <span th:unless="${currentPage != i}">[[${i}]]</span>
+    </span>
+  <span>]&nbsp;</span>
+  <span>
+      <a th:if="${currentPage > 1}" th:href="@{'/docs?page=1'}" title="First"
+         class="fa fa-fast-backward"></a>
+      <span th:unless="${currentPage > 1}" title="First" class="fa fa-fast-backward"></span>
+    </span>
+  <span>
+      <a th:if="${currentPage > 1}" th:href="@{'/docs?page=__${currentPage - 1}__'}" title="Previous"
+         class="fa fa-step-backward"></a>
+      <span th:unless="${currentPage > 1}" title="Previous" class="fa fa-step-backward"></span>
+    </span>
+  <span>
+      <a th:if="${currentPage < totalPages}" th:href="@{'/docs?page=__${currentPage + 1}__'}" title="Next"
+         class="fa fa-step-forward"></a>
+      <span th:unless="${currentPage < totalPages}" title="Next" class="fa fa-step-forward"></span>
+    </span>
+  <span>
+      <a th:if="${currentPage < totalPages}" th:href="@{'/docs?page=__${totalPages}__'}" title="Last"
+         class="fa fa-fast-forward"></a>
+      <span th:unless="${currentPage < totalPages}" class="fa fa-step-forward"></span>
+
+    </span>
+</div>
+</body>
+</html>

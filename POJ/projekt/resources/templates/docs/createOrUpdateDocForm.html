@@ -1,0 +1,37 @@
+<html xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout (~{::body},'docs')}">
+
+<body>
+
+<h2>Doctor</h2>
+<form th:object="${doc}" class="form-horizontal" id="add-doc-form" method="post">
+  <div class="form-group has-feedback">
+    <input
+      th:replace="~{fragments/inputField :: input ('First Name', 'firstName', 'text')}" />
+    <input
+      th:replace="~{fragments/inputField :: input ('Last Name', 'lastName', 'text')}" />
+    <table>
+      <tr>
+        <td>Specialties:</td>
+      </tr>
+      <tr>
+      <td><span th:each="specialty : ${doc.specialties}"
+                th:text="${specialty.name + ' '}"></span></td>
+      </tr>
+    </table>
+
+
+
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button
+        th:with="text=${doc['new']} ? 'Add Doctor' : 'Update Doctor'"
+        class="btn btn-primary" type="submit" th:text="${text}">Add
+        Doctor</button>
+    </div>
+  </div>
+</form>
+</body>
+</html>
+

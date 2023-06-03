@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout (~{::body},'docs')}">
+
+<body>
+
+
+<h2>Doctor Information</h2>
+
+
+<table class="table table-striped" th:object="${doc}">
+  <tr>
+    <th>Name</th>
+    <td><b th:text="*{firstName + ' ' + lastName}"></b></td>
+  </tr>
+  <tr>
+    <th>Specialty:</th>
+    <td><span th:each="specialty : ${doc.specialties}"
+              th:text="${specialty.name + ' '}"></span></td>
+
+
+</table>
+
+<a th:href="@{__${doc.id}__/edit}" class="btn btn-primary">Edit
+  Doctor</a>
+
+<br />
+<br />
+<br />
+<h2>Accessibility</h2>
+
+<table class="table table-striped">
+
+
+</table>
+
+</body>
+
+</html>
