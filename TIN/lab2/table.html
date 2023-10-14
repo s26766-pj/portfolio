@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="left-column">
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="assignment.html">Assignment</a></li>
+            <li><a href="lorem.html">Lorem Ipsum</a></li>
+            <li><a href="table.html">Table</a></li>
+        </ul>
+    </div>
+    <div class="right-column">
+        <!-- Wstrzykuj treść tabelki i formularza -->
+        <table class="striped-table">
+            <thead>
+            <tr>
+                <th>No.</th>
+                <th>Latin Name</th>
+                <th>Abbreviation</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="alternate-row">
+                <td>1</td>
+                <td>Cirrus</td>
+                <td>Ci</td>
+                <td>Thin, fibrous clouds found at high altitudes. Typically associated with fair, stable weather and composed of ice crystals.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Cumulus</td>
+                <td>Cu</td>
+                <td>Fluffy, white clouds with distinct shapes. Often seen on sunny days but can develop into rain clouds, such as Cumulonimbus.</td>
+            </tr>
+            <tr class="alternate-row">
+                <td>3</td>
+                <td>Stratus</td>
+                <td>St</td>
+                <td>Uniform and flat clouds forming a gray or white layer in the sky. Can bring light rain or drizzle.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Nimbostratus</td>
+                <td>Ns</td>
+                <td>Dense, uniform clouds that bring heavy rain or snow.</td>
+            </tr>
+            <tr class="alternate-row">
+                <td>5</td>
+                <td>Cumulonimbus</td>
+                <td>Cb</td>
+                <td>Powerful thunderstorm clouds, often reaching immense heights. Associated with thunderstorms, rain, hail, lightning, and strong winds.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Altocumulus</td>
+                <td>Ac</td>
+                <td>Mid-level clouds that can take various forms. Often appear as white or gray patches or bands in the sky.</td>
+            </tr>
+            <tr class="alternate-row">
+                <td>7</td>
+                <td>Altostratus</td>
+                <td>As</td>
+                <td>Mid-level clouds that typically cover the sky with a uniform layer, obscuring the sun. Can bring rain or snow.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Stratocumulus</td>
+                <td>Sc</td>
+                <td>Low, layered clouds that often form large, white patches or bands in the sky.</td>
+            </tr>
+            <tr class="alternate-row">
+                <td>9</td>
+                <td>Cirrostratus</td>
+                <td>Cs</td>
+                <td>Thin, high-altitude clouds that cover the sky with a uniform layer. Often obscure the sun, creating a halo effect.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Cirrocumulus</td>
+                <td>Cc</td>
+                <td>Thin, high-altitude clouds that appear as small, white, fluffy patches or bands.</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <form class="rating-form" id="rating-form">
+            <div class="form-column">
+                <label for="rating">Rate this page (1-5):</label>
+            </div>
+            <div class="form-column">
+                <input type="number" id="rating" name="rating" min="1" max="5" required>
+                <button type="submit" id="submit-button">Submit</button>
+            </div>
+        </form>
+        <div class="thank-you">Thank You! <span class="heart-icon">&#10084;</span></div>
+
+    </div>
+</div>
+<div class="footer">
+    This sample page was created especially for laboratories taking place at PJATK in the subject of Internet technologies by a student with index number s26766.
+</div>
+</body>
+</html>
