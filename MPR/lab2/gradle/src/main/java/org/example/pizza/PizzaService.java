@@ -31,5 +31,8 @@ public class PizzaService {
 
         return new Order(foundPizza);
     }
+    public List<Pizza> getAvailablePizzas() {
+        return availablePizzas;
+    }
 
 }
