@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Przykładowa Strona WWW</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-color: #000000;
+      color: #FFFFFF;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    nav {
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    main {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+
+    table {
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    form {
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    label, input, textarea, select {
+      display: block;
+      margin: 10px 0;
+    }
+
+    input[type="text"], textarea, select {
+      width: 100%;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Niose Światło!</h1>
+  <nav>
+    <ul>
+      <li><a href="#">Strona Główna</a></li>
+      <li><a href="#">O Nas</a></li>
+      <li><a href="#">Produkty</a>
+      </li>
+      <li><a href="#">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h2>Witaj na naszej stronie!</h2>
+  <img src="logo.png" alt="Logo gwiazda">
+
+  <h3>Nasze Produkty</h3>
+  <table>
+    <thead>
+    <tr>
+      <th>Nazwa Produktu</th>
+      <th>Cena</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Świeca zapachowa</td>
+      <td>10.00 PLN</td>
+    </tr>
+    <tr>
+      <td>Lampa biurowa</td>
+      <td>150.00 PLN</td>
+    </tr>
+    <tr>
+      <td>Żyrandol</td>
+      <td>200.00 PLN</td>
+    </tr>
+    <tr>
+      <td>Kinkiet</td>
+      <td>100.00 PLN</td>
+    </tr>
+    <tr>
+      <td>Plafon</td>
+      <td>205.00 PLN</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <h3>Skontaktuj się z nami</h3>
+  <form action="przetwarzanie_formularza.php" method="post">
+    <label for="imie">Imię:</label>
+    <input type="text" id="imie" name="imie" required>
+
+    <label for="wiadomosc">Wiadomość:</label>
+    <textarea id="wiadomosc" name="wiadomosc" rows="4" required></textarea>
+
+    <label for="wybor">Wybierz opcję:</label>
+    <select id="wybor" name="wybor">
+      <option value="opcja_a">Reklamacja</option>
+      <option value="opcja_b">Oferta hurtowa</option>
+      <option value="opcja_c">Dostawa</option>
+    </select>
+    <hr>
+    <label for="wybor">Wybierz skąd jesteś:</label>
+    <table>
+      <tr>
+        <th><label for="opcja_a"></label></th>
+        <td><input type="radio" id="opcja_a" name="opcja" value="A"></td>
+        <td class="align-right"><label for="opcja_a">Pomorze</label></td>
+      </tr>
+      <tr>
+        <th><label for="opcja_b"></label></th>
+        <td><input type="radio" id="opcja_b" name="opcja" value="B"></td>
+        <td class="align-right"><label for="opcja_b">Reszta Polski</label></td>
+      </tr>
+      <tr>
+        <th><label for="opcja_c"></label></th>
+        <td><input type="radio" id="opcja_c" name="opcja" value="C"></td>
+        <td class="align-right"><label for="opcja_c">Zagranica</label></td>
+      </tr>
+      <tr>
+        <th><label for="wiadomosc"></label></th>
+        <td></td>
+        <td><input class="align-left" type="submit" value="Wyślij"></td>
+      </tr>
+    </table>
+  </form>
+</main>
+
+<footer>
+  <p>&copy; 2023 PJATK Moja Strona WWW nr studenta s26766</p>
+</footer>
+</body>
+</html>
