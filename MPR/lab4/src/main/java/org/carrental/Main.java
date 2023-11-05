@@ -1,12 +1,7 @@
 package org.carrental;
 
-import org.carrental.model.Car;
-import org.carrental.model.CarClass;
-import org.carrental.model.CarStatus;
 import org.carrental.repository.CarRepository;
 import org.carrental.service.CarService;
-
-import java.util.List;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.

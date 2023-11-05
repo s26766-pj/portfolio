@@ -1,7 +1,7 @@
 package org.carrental.repository;
 
-import org.carrental.model.Car;
-import org.carrental.model.CarStatus;
+import org.carrental.model.car.Car;
+import org.carrental.model.car.CarStatus;
 
 import java.util.ArrayList;
 import java.util.List;

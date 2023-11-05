@@ -3,8 +3,8 @@ package org.carrental.service;
 import lombok.RequiredArgsConstructor;
 import org.carrental.exception.CarNotFoundException;
 import org.carrental.exception.ValidationException;
-import org.carrental.model.Car;
-import org.carrental.model.CarStatus;
+import org.carrental.model.car.Car;
+import org.carrental.model.car.CarStatus;
 import org.carrental.repository.CarRepository;
 
 import java.util.List;
@@ -38,7 +38,7 @@ public class CarService {
     }
 
     public Car updateModel(Integer id, String newModel){
-        if (newModel.isBlank()){
+        if (newModel == null || newModel.isBlank()){
             throw new ValidationException("cannot be blank", "newModel");
         }
 
