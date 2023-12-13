@@ -9,45 +9,46 @@ import org.carrental.repository.CarRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
 public class CarService {
     private final CarRepository carRepository;
 
-
-    public Car create(Car car) {
-        if (car.getMake() == null || car.getMake().isBlank()){
-            throw new ValidationException("make", "Cannot be blank");
+    public Car createCar(Car car) {
+        if (car.getMake() == null || car.getMake().isBlank()) {
+            throw new ValidationException("cannot be blank", "make");
         }
-        if (car.getModel() == null || car.getModel().isBlank()){
-            throw new ValidationException("model", "Cannot be blank");
-        }
-        if (car.getVin() == null || car.getVin().isBlank()) {
-            throw new ValidationException("vin", "cannot be blank");
-        }
-        if (car.getVin().length() != 3){
-            throw new ValidationException("vin", "length must be 3");
+        if (car.getVin().length() != 3) {
+            throw new ValidationException("length must be 3", "vin");
         }
 
-        return carRepository.create(car);
+        carRepository.create(car);
+
+        return car;
+    }
+
+    public Car getById(Integer id){
+        Optional<Car> car = carRepository.getById(id);
+
+        return car.orElseThrow(() ->  new CarNotFoundException("Car does not exist"));
     }
 
     public List<Car> getAvailableCars(){
         return carRepository.getByStatus(CarStatus.AVAILABLE);
     }
 
-    public List<Car> getAllCars(){
-        return carRepository.getAll();
-    }
-
-    public Car getById(Integer id){
-        if (id == null){
-            throw new ValidationException("id", "cannot be null");
+    public Car updateModel(Integer id, String newModel){
+        if (newModel == null || newModel.isBlank()){
+            throw new ValidationException("cannot be blank", "newModel");
         }
 
-        return carRepository.getById(id)
-                .orElseThrow( ()-> new CarNotFoundException("Car does not exist"));
+        return carRepository.updateModel(id, newModel)
+                .orElseThrow(() -> new CarNotFoundException("car does not exist"));
     }
 
+    public List<Car> getAll(){
+        return carRepository.getAll();
+    }
 }

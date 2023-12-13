@@ -10,7 +10,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import java.util.List;
-import java.util.Optional;
 
 @SpringBootApplication
 public class Main {
@@ -19,19 +18,48 @@ public class Main {
 
         CarService carService = context.getBean("carService", CarService.class);
 
-        Car car = new Car(null, "Audi", "A3", "vin", CarClass.STANDARD, CarStatus.AVAILABLE, 50D);
-        Car car2 = new Car(null, "Audi", "A6", "vin", CarClass.STANDARD, CarStatus.RENTED, 150D);
-        carService.create(car);
-        carService.create(car2);
 
-        List<Car> allCars = carService.getAllCars();
-        System.out.println(allCars);
-        CarRepository carRepository = context.getBean("carRepository", CarRepository.class);
-        Optional<Car> carById = carRepository.getById(0);
+        Car car2 = new Car(null, "volkswagen", "passat",
+                "abc",
+                CarClass.STANDARD, CarStatus.RENTED, 50D);
+        Car car3 = new Car(null, "volkswagen", "passat",
+                "zxc",
+                CarClass.PREMIUM, CarStatus.AVAILABLE, 100D);
+//        Car createdCar = carService.createCar(car);
+        Car createdCar = carService.createCar(car2);
+        carService.createCar(car3);
+
+        System.out.println(createdCar);
+
+        List<Car> carList = carService.getAll();
+
+        System.out.println(carList);
+//
+//        Car carById = carService.getById(0);
+//
+//        System.out.println(carById);
+//        carService.updateModel(2, "polo");
+//
+//        List<Car> availableCars = carService.getAvailableCars();
+//
+//        carRepository.removeAll();
+//        System.out.println(availableCars);
+//
+//
+//        Car invalidCar = new Car(null, "volkswagen",
+//                "golf", "1234",
+//                CarClass.STANDARD, CarStatus.AVAILABLE);
+//
+////        carService.createCar(invalidCar);
 
 
-        System.out.println(carById);
-
+        // Plan działania
+        // 1. Zaimplementowanie pozostałych metod z carRepository
+        // 2. Utworzenie modelu,serwisu i repozytorium dla klienta
+        // 3. Dodanie logów do CarService i ClientService wykorzystując np. log4j
+        //
+        // Kolejny zjazd:
+        // Pokrycie projektu testami jednostkowymi i początek prac nad systemem rezerwacji
 
     }
 }

@@ -3,9 +3,8 @@ package org.carrental.service;
 import lombok.RequiredArgsConstructor;
 import org.carrental.exception.CarNotFoundException;
 import org.carrental.exception.RentCreationException;
+import org.carrental.exception.RentException;
 import org.carrental.model.car.Car;
-import org.carrental.model.car.CarStatus;
-import org.carrental.model.client.Client;
 import org.carrental.model.rent.Rent;
 import org.carrental.repository.RentRepository;
 import org.springframework.stereotype.Service;
@@ -16,36 +15,40 @@ import java.time.LocalDate;
 @RequiredArgsConstructor
 public class RentService {
     private final CarService carService;
-    private final ClientService clientService;
     private final RentRepository rentRepository;
+    private final ClientService clientService;
 
-    public Rent createRent(Integer carId, Integer clientId, LocalDate startDate, int rentLength){
-        //
-        // walidacje
-        // startDate >= actual date
+    public Rent create(Integer carId,
+                       Integer clientId,
+                       LocalDate startDate,
+                       int rentLength) {
+        // Start date nie może być w przeszłości
+        // carId != null
+        // clientId != null
         // rentLength > 0
+        // Czy pojazd jest dostępny
+
+
         Car selectedCar;
         try {
             selectedCar = carService.getById(carId);
-        } catch (CarNotFoundException ex){
-            throw new RentCreationException("Couldnt create rent", ex);
+        } catch (CarNotFoundException exception){
+            throw new RentException("Cannot create rent", exception);
         }
-        if (selectedCar.getCarStatus() != CarStatus.AVAILABLE){
-            throw new RentCreationException("couldnt create rent");
-        }
+        // To samo dla klienta
 
-        Client selectedClient = clientService.getById(clientId);
-        /// Mogą być wyrzucone wyjątki
+        // Aktualizacja pojazdu do statusu rented
 
-        double rentPrice = selectedCar.getPrice() * rentLength;
-        // Chcemy sprawdzić czy cena jest prawidłowo wyliczona w teście
+        Double price = selectedCar.getDailyRate() * rentLength;
+        // Sprawdzić testem czy cena jest prawidłowo naliczona
+        LocalDate endDate = startDate.plusDays(rentLength);
+        // Sprawdzić testem czy data końcowa się zgadza
 
-        Rent rent = new Rent(carId, clientId, startDate, startDate.plusDays(rentLength), rentPrice);
+        Rent rent = new Rent(carId, clientId, startDate, endDate, price);
 
         return rentRepository.create(rent);
     }
 
-    // Wyszukanie przyszłych najmów, Sprawdzenie wszystkich najmów, wyszukanie po id
-
+    // metoda na pobranie wszystkich nadchodzących rezerwacji
 
 }

@@ -8,11 +8,11 @@ import org.carrental.model.car.CarStatus;
 import org.carrental.repository.CarRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.List;
 import java.util.stream.Stream;
@@ -24,86 +24,126 @@ class CarServiceTest {
     private static CarRepository carRepository;
 
     @BeforeAll
-    static void setUp(){
+    static void setup() {
         carRepository = new CarRepository();
         carService = new CarService(carRepository);
     }
 
+
     @AfterEach
-    void cleanUp(){
+    void cleanUp() {
         carRepository.removeAll();
     }
 
     @Test
-    void shouldCorrectlyCreateNewCar(){
-        Car car = new Car(
-                null, "Volkswagen", "Golf", "123", CarClass.STANDARD, CarStatus.AVAILABLE, 50D
-        );
+    void shouldCorrectlyCreateCar() {
+        Car car = new Car(null, "volkswagen", "golf", "123",
+                CarClass.STANDARD, CarStatus.AVAILABLE, 50D);
 
-        Car result = assertDoesNotThrow(()->carService.create(car));
+        Car result = assertDoesNotThrow(() -> carService.createCar(car));
 
         assertEquals(car.getMake(), result.getMake());
+        assertNotNull(result.getId());
     }
 
     @Test
     void shouldNotReturnAnyCar() {
-        List<Car> result = carService.getAllCars();
+        List<Car> result = carService.getAll();
 
         assertTrue(result.isEmpty());
     }
 
     @Test
-    void shouldNotCreateNewCar() {
-        Car car = new Car(
-                null, "Volkswagen", "Golf", "1234", CarClass.STANDARD, CarStatus.AVAILABLE, 50D
-        );
+    void shouldNotCreateCarDueToValidation() {
+        Car car = new Car(null, "volkswagen", "golf", "1234",
+                CarClass.STANDARD, CarStatus.AVAILABLE, 50D);
 
-        ValidationException result = assertThrows(ValidationException.class,()->carService.create(car));
+        ValidationException result = assertThrows(ValidationException.class,
+                () -> carService.createCar(car));
 
+        assertEquals("vin", result.getField());
         assertEquals("vin length must be 3", result.getMessage());
     }
 
+    @Test
+    void shouldThrowCarNotFoundExceptionWhenIdDoesNotExist() {
+        assertThrows(CarNotFoundException.class,
+                () -> carService.getById(0));
+    }
+
     @ParameterizedTest
-    @MethodSource("provideInvalidCarsAndMessages")
-    void shouldNotCreateCar(Car car, String message){
-        ValidationException result = assertThrows(ValidationException.class,()->carService.create(car));
+    @MethodSource(value = "providesInvalidMakeValues")
+    void shouldCorrectlyValidateMake(String make) {
+        Car car = new Car(null, make,
+                "golf", "123",
+                CarClass.STANDARD,
+                CarStatus.AVAILABLE, 50D);
 
-        assertEquals(message, result.getMessage());
+        ValidationException result =
+                assertThrows(ValidationException.class,
+                        () -> carService.createCar(car));
+
+        assertEquals("make", result.getField());
+        assertEquals("make cannot be blank", result.getMessage());
     }
 
     @Test
-    void shouldNotReturnCarByNotExistingId(){
-        assertThrows(CarNotFoundException.class, () -> carService.getById(1));
+    void shouldCorrectlyUpdateCar() {
+        Car car = new Car(null, "volkswagen", "golf", "123",
+                CarClass.STANDARD, CarStatus.AVAILABLE, 50D);
+
+        Car createdCar = carService.createCar(car);
+
+        Car result = carService.updateModel(createdCar.getId(), "passat");
+
+        assertEquals("passat", result.getModel());
+        assertNotEquals("golf", result.getModel());
     }
 
     @Test
-    void shouldCorrectlyReturnCar(){
-        Car car = new Car(
-                null, "Volkswagen", "Golf", "123", CarClass.STANDARD, CarStatus.AVAILABLE, 100D
-        );
-        Car car2 = new Car(
-                null, "Volkswagen", "Golf", "321", CarClass.STANDARD, CarStatus.AVAILABLE, 80D
-        );
-
-        carService.create(car);
-        Car secondCreatedCar = carService.create(car2);
-
-        Car result = assertDoesNotThrow(() -> carService.getById(secondCreatedCar.getId()));
-
-        assertEquals(secondCreatedCar, result);
+    void shouldThrowExceptionWhenUpdatingCarThatDoesNotExist() {
+        assertThrows(CarNotFoundException.class,
+                () -> carService.updateModel(1, "X"));
     }
 
+    @ParameterizedTest
+    @ValueSource(strings = {"", " "})
+    void shouldThrowValidationExceptionWhenUpdatingCarWithInvalidModel(String newModel) {
+        assertThrows(ValidationException.class, () -> carService.updateModel(1, newModel));
+    }
 
-    public static Stream<Arguments> provideInvalidCarsAndMessages() {
+    @Test
+    void shouldReturnEmptyListOfAvailableCars(){
+        List<Car> result = assertDoesNotThrow(() -> carService.getAvailableCars());
+
+        assertTrue(result.isEmpty());
+    }
+
+    @Test
+    void ShouldReturnAvailableCars(){
+        Car car = new Car(null, "volkswagen", "golf", "123",
+                CarClass.STANDARD, CarStatus.AVAILABLE,100D);
+        Car car2 = new Car(null, "volkswagen", "passat", "123",
+                CarClass.STANDARD, CarStatus.RENTED, 50D);
+
+        carService.createCar(car);
+        carService.createCar(car2);
+
+        List<Car> result = assertDoesNotThrow(() -> carService.getAvailableCars());
+
+        assertFalse(result.isEmpty());
+        assertEquals(1, result.size());
+        assertTrue(result
+                .stream()
+                .allMatch( it -> it.getStatus().equals(CarStatus.AVAILABLE)));
+    }
+
+    public static Stream<Arguments> providesInvalidMakeValues() {
         return Stream.of(
-                Arguments.of(new Car(null, "Volkswagen", "Golf", "1234", CarClass.STANDARD, CarStatus.AVAILABLE, 100D)
-                        , "vin length must be 3"),
-                Arguments.of(new Car(null, "", "Golf", "123", CarClass.STANDARD, CarStatus.AVAILABLE, 50D)
-                        , "make Cannot be blank"),
-                Arguments.of(new Car(null, null, "Golf", "123", CarClass.STANDARD, CarStatus.AVAILABLE, 50D)
-                        , "make Cannot be blank")
+                Arguments.of(""),
+                Arguments.of("  "),
+                null
         );
     }
-
 
 }

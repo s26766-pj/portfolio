@@ -11,7 +11,6 @@ public class Car {
     private String model;
     private String vin;
     private CarClass carClass;
-    private CarStatus carStatus;
-    private Double price;
-
+    private CarStatus status;
+    private Double dailyRate;
 }

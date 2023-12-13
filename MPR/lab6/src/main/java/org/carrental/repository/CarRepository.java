@@ -11,53 +11,48 @@ import java.util.stream.Collectors;
 
 @Repository
 public class CarRepository {
-
-    private List<Car> carList = new ArrayList<>();
+    List<Car> carList = new ArrayList<>();
 
     public Car create(Car car) {
         car.setId(carList.size());
         carList.add(car);
+
         return car;
     }
 
     public Optional<Car> getById(Integer id){
-        return carList
-                .stream()
-                .filter(it -> it.getId().equals(id))
+        return carList.stream()
+                .filter(car -> car.getId().equals(id))
                 .findFirst();
     }
 
     public List<Car> getByStatus(CarStatus carStatus){
-        return carList
-                .stream()
-                .filter(it -> it.getCarStatus().equals(carStatus))
+        return carList.stream()
+                .filter(car -> car.getStatus().equals(carStatus))
                 .collect(Collectors.toList());
     }
 
-    public void removeById(Integer id){
-        Optional<Car> car = getById(id);
-
-        car.ifPresent(it -> carList.remove(it));
+    public List<Car> getAll(){
+        return carList;
     }
 
-    public void removeAll(){
+    public void removeAll() {
         carList = new ArrayList<>();
     }
 
-    public Optional<Car> modify(Car car) {
-        Optional<Car> carToModify = getById(car.getId());
+    public void removeById(Integer id){
+        Optional<Car> optionalCar = getById(id);
 
-        return carToModify.map(it -> {
-            it.setMake(car.getMake());
-            it.setCarClass(car.getCarClass());
-            it.setModel(car.getModel());
-            it.setCarStatus(car.getCarStatus());
-            it.setVin(car.getVin());
-            return it;
+        optionalCar.ifPresent(it -> carList.remove(it));
+    }
+
+    public Optional<Car> updateModel(Integer id, String newModel){
+        Optional<Car> optionalCar = getById(id);
+
+        return optionalCar.map( car -> {
+            car.setModel(newModel);
+            return car;
         });
     }
 
-    public List<Car> getAll() {
-        return carList;
-    }
 }

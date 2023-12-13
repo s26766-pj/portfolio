@@ -1,2 +1,2 @@
-rootProject.name = "MPR-gr-36-Car-rental"
+rootProject.name = "MPR-35-car-rental"
 

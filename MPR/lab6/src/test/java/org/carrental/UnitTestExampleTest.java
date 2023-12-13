@@ -14,13 +14,6 @@ class UnitTestExampleTest {
 
     private UnitTestExample unitTestExample = new UnitTestExample();
 
-    public static Stream<Arguments> provideTwoIntegers() {
-        return Stream.of(Arguments.of(1,2),
-                Arguments.of(5,6),
-                Arguments.of(10,11));
-    }
-
-
     @Test
     void shouldCorrectlyAddTwoIntegers(){
         int result = unitTestExample.add(1, 1);
@@ -29,20 +22,41 @@ class UnitTestExampleTest {
     }
 
     @ParameterizedTest
-    @ValueSource(ints = {1,2,5})
+    @ValueSource(ints = {1,5,8,10,50})
     void shouldCorrectlyAddTwoIntegers(int a){
-        int result = unitTestExample.add(1, a);
+        int result = unitTestExample.add(a, 1);
 
-        assertEquals(a + 1, result);
+        assertEquals(a+1, result);
     }
 
-
     @ParameterizedTest
-    @MethodSource(value = "provideTwoIntegers")
-    void shouldCorrectlyAddTwoIntegers(int a, int b) {
+    @MethodSource(value = "provideArguments")
+    void shouldCorrectlyAddTwoIntegers(int a, int b){
         int result = unitTestExample.add(a, b);
 
         assertEquals(a+b, result);
+    }
+
+    @ParameterizedTest
+    @MethodSource(value = "provideArgumentsAndResult")
+    void shouldCorrectlyAddTwoIntegers(int a, int b, int expectedResult){
+        int result = unitTestExample.add(a, b);
+
+        assertEquals(expectedResult, result);
+    }
+
+    public static Stream<Arguments> provideArgumentsAndResult() {
+        return Stream.of(
+                Arguments.of(0, 1, 1)
+        );
+    }
+
+    public static Stream<Arguments> provideArguments() {
+        return Stream.of(
+                Arguments.of(1,1),
+                Arguments.of(5,10),
+                Arguments.of(0,0)
+        );
     }
 
 }
