@@ -1,0 +1,109 @@
+American National Standards Institute (ANSI) - Amerykański Narodowy Instytut Normalizacyjny 
+as far as (something) is / (to) assign - przypisać, przydzielić 
+are concerned - jeżeli chodzi o (coś) 
+baseband system – system transmisji w paśmie podstawowym 
+(to) bear in mind - pamiętać / mieć coś na uwadze 
+boot – rozruch 
+broadband system – system szerokopasmowy 
+bus network - sieć topologii magistrali 
+bus / trunk / backbone – magistrala 
+cabling – okablowanie 
+campus area network (CAN) - sieć uczelniana 
+centralized communications point – scentralizowany punkt komunikacyjny 
+circular communication path - ścieżka komunikacjna w kształcie okręgu 
+client – klient 
+client/server network - sieć typu klient-serwer 
+closed loop - zamknięta pętla 
+coaxial cable – kabel koncentryczny 
+common user network - sieć ogólnie dostępna 
+communication link - łącze komunikacyjne 
+communication path - ścieżka komunikacyjna 
+communication protocol - protokół komunikacyjny 
+computer network topology – topologia sieci komputerowej 
+computer network - sieć komputerowa 
+copper wire – miedziany przewód 
+coupler - łącznik 
+(to) decrypt - deszyfrować / rozszyfrować 
+device - urządzenie 
+disparate company sites – siedziby firmy w różnych lokalizacjach 
+disruption - zakłócenie 
+dynamic host configuration protocol (DHCP) - protokół dynamicznego konfigurowania hostów 
+(to) encrypt – zaszyfrować 
+enterprise private network (EPN) - prywatna sieć przedsiębiorstwa 
+Ethernet standard – standard Ethernet 
+expansion card – karta rozszerzenia 
+expansion slot - złącze do rozbudowy funkcjonalnej / gniazdo rosrzerzające 
+fibre-optic cable – kabel światłowodowy 
+file transfer protocol (FTP) - protokół przesyłania plików 
+fully connected network - sieć w pełni połączona 
+guideline – wytyczna 
+high-frequency RF signal - sygnał radiowy wysokiej częstotliwości 
+high-performance network - sieć wysokiej wydajności 
+high-speed network – szybka sieć / sieć o dużej szybkości transmisji danych 
+home area network (HAN) - sieć domowa 
+host bus adapter - (HBA) - adapter magistrali hosta 
+host computer – komputer główny / komputer macierzysty 
+hub – koncentrator 
+in short - pokrótce 
+inexpensive – niedrogi 
+inoperable – nie nadający się do użytku / nieobsługiwalny 
+Institute of Electrical and Electronics Engineers (IEEE) - Instytut Inżynierów Elektryków i Elektroników 
+internet protocol (IP) - protokół internetowy 
+IP address – adres IP 
+IrDA – standard umożliwiający transmisję danych w podczerwieni 
+layer two tunneling protocol (L2TP) - protokół L2TP (protokół umożliwiający tunelowanie ruchu) 
+local area network (LAN) - lokalna sieć komputerowa 
+(to be) made up (of something) - składać się (z czegoś) 
+mesh network - sieć kratowa 
+metropolian area network (MAN) - miejska sieć komputerowa 
+(to) move about - poruszać się 
+network adapter – adapter sieciowy 
+network architecture – architektura sieci 
+network operating system (NOS) - sieciowy system operacyjny 
+network resources – zasoby sieciowe 
+network standard – standard sieciowy 
+nickname - psełdonim 
+node - węzeł 
+obstacle – przeszkoda 
+partial mesh network - częściowa sieć kratowa 
+peer-to-peer (P2P) network - sieć równorzędna / sieć typu każdy z każdym 
+personal area network (PAN) - sieć prywatna 
+point-to-point tunneling protocol (PPTP) - protokół PPTP (protokół komunikacyjny umożliwiający tworzenie wirtualnych sieci prywatnych wykorzystujących technologię tunelowania) 
+protocol - protokół 
+radio-frequency indetification (RFID) - system identyfikacji radiowej 
+receiving device - urządzenie odbiorcze 
+remote connection - połączenie zdalne 
+remote station – stacja zdalna 
+request - żądanie 
+response - odpowiedź 
+ring network - sieć o topologi pierścienia 
+(to) route – kierować 
+router – ruter / router 
+scope (of network) - zasięg (sieci) 
+secure socket layer (SSL) - protokół SSL (protokół który chroni przesyłane przez stronę internetową dane, takie jak hasła, dane płatnicze czy informacje osobiste) 
+sending device - urządzenie nadawcze 
+server – serwer 
+shared key – klucz współdzielony 
+shared storage - współdzielona pamięć / współdzielone składowanie 
+shielded twisted pair cable - skrętka ekranowa 
+single site – jedno miejsce 
+socket – gniazdo 
+star network - sieć o topologii gwiazdy 
+storage area network (SAN) - sieć pamięci masowych 
+storage area – obszar składowania 
+storage resources – zasoby pamięci 
+subset - podzbiór 
+switch – switch / przęłącznik / rozdzielacz 
+T-connector - trójnik 
+to sum up - reasumując 
+token ring – token ring (metoda tworzenia sieci LAN opracowana przez firmę IBM w latach 70) 
+transmission control protocol/internet protocol (TCP/IP) - protokół sterowania transmisją w sieci / protokół TCP/IP 
+transport layer security (TLS) - zabezpieczenia warstwy transportowej 
+ultra wideband (UWB) - technologia UWB (technika radiokomunikacji bazującą na szybkim wysyłaniu krótkotrwałych impulsów, gdzie czas trwania pojedynczego impulsu jest rzędu kilkudziesięciu pikosekund, a to pozwala uzyskać bardzo szerokie widmo emisji) 
+unshielded twisted pair cable - skrętka nieekranowa 
+virtual private network (VPN) - wirtualna sieć prywatna 
+wide area network (WAN) - rozległa sieć komputerowa 
+Wi-Fi base station – stacja bazowa wi-fi 
+wired connection - połączenie przewodowe 
+wireless application protocol (WAP) - protokół aplikacji bezprzewodowych 
+wireless client – klient sieci bezprzewodowej
