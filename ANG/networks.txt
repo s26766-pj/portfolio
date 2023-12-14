@@ -85,7 +85,7 @@ sending device - urządzenie nadawcze
 server - serwer 
 shared key - klucz współdzielony 
 shared storage - współdzielona pamięć / współdzielone składowanie 
-shielded twisted pair cable - skrętka ekranowa 
+shielded twisted pair cable - skrętka ekranowana 
 single site - jedno miejsce 
 socket - gniazdo 
 star network - sieć o topologii gwiazdy 
@@ -100,7 +100,7 @@ token ring - token ring (metoda tworzenia sieci LAN opracowana przez firmę IBM 
 transmission control protocol/internet protocol (TCP/IP) - protokół sterowania transmisją w sieci / protokół TCP/IP 
 transport layer security (TLS) - zabezpieczenia warstwy transportowej 
 ultra wideband (UWB) - technologia UWB (technika radiokomunikacji bazującą na szybkim wysyłaniu krótkotrwałych impulsów, gdzie czas trwania pojedynczego impulsu jest rzędu kilkudziesięciu pikosekund, a to pozwala uzyskać bardzo szerokie widmo emisji) 
-unshielded twisted pair cable - skrętka nieekranowa 
+unshielded twisted pair cable - skrętka nieekranowana 
 virtual private network (VPN) - wirtualna sieć prywatna 
 wide area network (WAN) - rozległa sieć komputerowa 
 Wi-Fi base station - stacja bazowa wi-fi 
