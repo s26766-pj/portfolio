@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="lab4.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIN Lab4</title>
+
+</head>
+<body>
+<div class="container">
+
+    <div class="right-column">
+        <!--        wstrzykuj-->
+        <div class="scrollable-content">
+            <h1>TIN Lab4</h1>
+            <p>1. Napisz funkcję, sprawdzającą, czy dane trzy liczby tworzą
+                „trójkę pitagorejską” (uwaga – liczby nie muszą być podane w
+                kolejności rosnącej).</p>
+            <pre>
+                <code>
+                        function czyTrojkaPitagorejska(a, b, c) {
+                            const warunek1 = a * a + b * b === c * c;
+                            const warunek2 = b * b + c * c === a * a;
+                            const warunek3 = a * a + c * c === b * b;
+
+                            console.log("Podano liczby:", a, b, c);
+
+                            if (warunek1 || warunek2 || warunek3) {
+                                console.log("To jest trójka pitagorejska!");
+                            } else {
+                                console.log("To nie jest trójka pitagorejska.");
+                            }
+                        }
+                        // Przykładowe użycie funkcji
+                        czyTrojkaPitagorejska(1, 2, 3);
+                        czyTrojkaPitagorejska(15, 9, 12);
+                </code>
+            </pre>
+            <p>2. Napisz funkcję wypisującą wszystkie liczby z przedziału a-b,
+                podzielne przez c.</p>
+            <pre>
+                <code>
+                        function liczbyPodzielne(a, b, c) {
+                            if (a > b) {
+                                console.log("Błąd: a musi być mniejsze lub równe b");
+                                return;
+                            }
+
+                            const wyniki = [];
+
+                            for (let i = a; i <= b; i++) {
+                                if (i % c === 0) {
+                                    wyniki.push(i);
+                                }
+                            }
+
+                            console.log(`Liczby podzielne przez ${c} w przedziale od ${a} do ${b}:`);
+                            console.log(wyniki);
+                        }
+
+                        // Przykładowe użycie funkcji
+                        liczbyPodzielne(10, 50, 5);
+                </code>
+            </pre>
+            <p>3. Napisz funkcję wypisującą w konsoli tabliczkę mnożenia o
+                boku podanym jako parametr.</p>
+            <pre>
+                <code>
+                        function tabliczka(bok) {
+                            for (let i = 1; i <= bok; i++) {
+                                let wiersz = '';
+                                for (let j = 1; j <= bok; j++) {
+                                    wiersz += (i * j) + ' ';
+                                }
+                                console.log(wiersz.trim());
+                            }
+                        }
+
+                        // Przykładowe użycie funkcji
+                        tabliczka(3);
+                </code>
+            </pre>
+            <p>4. Napisz funkcję wypisującą w konsoli ciąg Fibonacciego o
+                długości podanej jako parametr.</p>
+            <pre>
+                <code>
+                        function fibonacci(length) {
+                            let fibArray = [];
+
+                            for (let i = 0; i < length; i++) {
+                                if (i <= 1) {
+                                    fibArray.push(i);
+                                } else {
+                                    fibArray.push(fibArray[i - 1] + fibArray[i - 2]);
+                                }
+                            }
+                            console.log(`Ciąg Fibonacciego o długości ${length}:`, fibArray);
+
+                        }
+
+                        // Przykładowe użycie funkcji
+                        fibonacci(20);
+                </code>
+            </pre>
+            <p>5. Napisz funkcję rysującą choinkę o podanej wysokości.</p>
+            <pre>
+                <code>
+                        function choinka(wysokosc) {
+                            for (let i = 1; i <= wysokosc; i++) {
+                                let gwiazdki = '*'.repeat(i);
+                                console.log(gwiazdki);
+                            }
+                        }
+
+                        // Przykładowe użycie funkcji
+                        choinka(4);
+                </code>
+            </pre>
+            <p>6. Napisz funkcję rysującą „choinkę nocą” o podanej wysokości
+                (szerokość jest tu nieco większa niż wysokość).</p>
+            <pre>
+                <code>
+                        function choinkaNoca(wysokosc) {
+                            for (let i = 0; i < wysokosc; i++) {
+                                let spacje = ' '.repeat(2 * i);
+                                let gwiazdkiPrzed = '*'.repeat(wysokosc - i);
+                                let gwiazdkiPo = '*'.repeat(wysokosc - i);
+
+                                console.log(gwiazdkiPrzed + spacje + gwiazdkiPo);
+                            }
+
+                            let szerokoscPodstawy = 2 * wysokosc;
+                            let gwiazdkiPodstawa = '*'.repeat(szerokoscPodstawy);
+                            console.log(gwiazdkiPodstawa);
+                        }
+
+                        // Przykładowe użycie funkcji
+                        choinkaNoca(6);
+                </code>
+            </pre>
+            <p>7. Napisz funkcję liczącą pole wybranej figury (prostokąt,
+                trapez, równoległobok, trójkąt) z wykorzystaniem instrukcji
+                switch. Każda figura powinna mieć osobną funkcję do liczenia
+                pola.</p>
+            <pre>
+                <code>
+                        function obliczPole(figura, parametry) {
+                            let pole;
+
+                            switch (figura) {
+                                case 'prostokat':
+                                    if (parametry.length === 2) {
+                                        pole = parametry[0] * parametry[1];
+                                    } else {
+                                        return 'Nieprawidłowa liczba parametrów dla prostokąta';
+                                    }
+                                    break;
+
+                                case 'trapez':
+                                    if (parametry.length === 3) {
+                                        pole = ((parametry[0] + parametry[1]) / 2) * parametry[2];
+                                    } else {
+                                        return 'Nieprawidłowa liczba parametrów dla trapezu';
+                                    }
+                                    break;
+
+                                case 'rownoleglobok':
+                                    if (parametry.length === 2) {
+                                        pole = parametry[0] * parametry[1];
+                                    } else {
+                                        return 'Nieprawidłowa liczba parametrów dla równoległoboku';
+                                    }
+                                    break;
+
+                                case 'trojkat':
+                                    if (parametry.length === 2) {
+                                        pole = (parametry[0] * parametry[1]) / 2;
+                                    } else {
+                                        return 'Nieprawidłowa liczba parametrów dla trójkąta';
+                                    }
+                                    break;
+
+                                default:
+                                    return 'Nieznana figura';
+                            }
+
+                            return `${figura}, pole wynosi: ${pole}`;
+                        }
+
+                        // Przykłady użycia funkcji
+                        console.log(obliczPole('prostokat', [4, 5]));
+                        console.log(obliczPole('trapez', [3, 5, 4]));
+                        console.log(obliczPole('rownoleglobok', [6, 8]));
+                        console.log(obliczPole('trojkat', [4, 6]));
+                </code>
+            </pre>
+            <p>8. Napisz funkcję liczącą pole wybranej figury (prostokąt,
+                trapez, równoległobok, trójkąt) bez użycia instrukcji
+                warunkowej (bez if, switch, pętli). Wykorzystaj funkcje
+                anonimowe i callback.</p>
+            <pre>
+                <code>
+                        const rectangleArea = (a, b) => a * b;
+                        const trapezoidArea = (a, b, h) => ((a + b) * h) / 2;
+                        const parallelogramArea = (base, height) => base * height;
+                        const triangleArea = (base, height) => (base * height) / 2;
+                        const calculateArea = (figure, params, callback) => {
+                            return callback(...params);
+                        };
+
+                        // Zdefinowanie długości boków
+                        const rectangleParams = [4, 6];
+                        const trapezParams = [3, 5, 4];
+                        const parallelogramParams = [7, 3];
+                        const triangleParams = [5, 8];
+
+                        // Obliczenie pola (callback)
+                        const rectangleAreaResult = calculateArea("rectangle", rectangleParams, rectangleArea);
+                        const trapezArea = calculateArea("trapez", trapezParams, trapezoidArea);
+                        const parallelogramAreaResult = calculateArea("parallelogram", parallelogramParams, parallelogramArea);
+                        const triangleAreaResult = calculateArea("triangle", triangleParams, triangleArea);
+
+                        // Wydruk wyników
+                        console.log("Pole prostokąta:", rectangleAreaResult);
+                        console.log("Pole trapezu:", trapezArea);
+                        console.log("Pole równoległoboku:", parallelogramAreaResult);
+                        console.log("Pole trójkąta:", triangleAreaResult);
+                </code>
+            </pre>
+            <p>9. Napisz funkcję wypisującą w konsoli trójkąt Pascala o
+                wysokości podanej jako parametr.</p>
+            <pre>
+                <code>
+                        const rectangleArea = (a, b) => a * b;
+                        const trapezoidArea = (a, b, h) => ((a + b) * h) / 2;
+                        const parallelogramArea = (base, height) => base * height;
+                        const triangleArea = (base, height) => (base * height) / 2;
+                        const calculateArea = (figure, params, callback) => {
+                            return callback(...params);
+                        };
+
+                        // Zdefinowanie długości boków
+                        const rectangleParams = [4, 6];
+                        const trapezParams = [3, 5, 4];
+                        const parallelogramParams = [7, 3];
+                        const triangleParams = [5, 8];
+
+                        // Obliczenie pola (callback)
+                        const rectangleAreaResult = calculateArea("rectangle", rectangleParams, rectangleArea);
+                        const trapezArea = calculateArea("trapez", trapezParams, trapezoidArea);
+                        const parallelogramAreaResult = calculateArea("parallelogram", parallelogramParams, parallelogramArea);
+                        const triangleAreaResult = calculateArea("triangle", triangleParams, triangleArea);
+
+                        // Wydruk wyników
+                        console.log("Pole prostokąta:", rectangleAreaResult);
+                        console.log("Pole trapezu:", trapezArea);
+                        console.log("Pole równoległoboku:", parallelogramAreaResult);
+                        console.log("Pole trójkąta:", triangleAreaResult);
+                </code>
+            </pre>
+            <p>10. Napisz funkcję cenzurującą zdanie. Funkcja ma otrzymać 2
+                parametry: tablicę niedozwolonych słów oraz zdanie do
+                ocenzurowania. Każde niedozwolone słowo ma zostać zastąpione
+                znakiem *.</p>
+            <pre>
+                <code>
+                        function cenzura(niedozwolone, zdanie) {
+                            const slowa = zdanie.split(' ');
+
+                            for (let i = 0; i < slowa.length; i++) {
+                                if (niedozwolone.some(slowo => slowa[i].toLowerCase().includes(slowo.toLowerCase()))) {
+                                    slowa[i] = '*';
+                                }
+                            }
+
+                            const ocenzurowaneZdanie = slowa.join(' ');
+                            console.log(ocenzurowaneZdanie);
+                        }
+
+                        // Przykładowe użycie funkcji
+                        cenzura(['Ala', 'kot'], 'Ala ma kota i psa');
+                </code>
+            </pre>
+        </div>
+    </div>
+
+</div>
+<div class="footer">
+    This sample page was created especially for laboratories taking place at PJATK in the subject of Internet technologies by a student with index number s26766.
+</div>
+</body>
+</html>

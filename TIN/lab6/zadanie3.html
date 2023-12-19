@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<title>Zadanie 3</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="TIN lab6">
+<meta name="keywords" content="HTML XHTML">
+<link rel="stylesheet" href="style.css" type="text/css">
+
+<body>
+<header>
+    <nav>
+        <table id="nav-table" class="custom-table">
+            <tbody>
+            <tr>
+                <td><a href="https://github.com/s26766-pj/portfolio/tree/main/TIN/lab6"><button class="subnavbtn">Kod</button></a></td>
+                <td><a href="index.html"><button class="subnavbtn">Zadanie 1</button></a></td>
+                <td><a href="zadanie2.html"><button class="subnavbtn">Zadanie 2</button></a></td>
+                <td><a href="zadanie3.html"><button class="subnavbtn">Zadanie 3</button></a></td>
+            </tr>
+            </tbody>
+        </table>
+    </nav>
+</header>
+<main>
+    <div id="table-container">
+        <h1>TIN lab 6</h1>
+        <br>
+        <h3>Zadanie 3</h3>
+        <br>
+        <p>
+            Generowanie tabeli HTML z danymi aut w JS. Tablicę obiektów typu auto:
+        </p>
+        <pre>
+            let auto = [
+                { rok: 2018, przebieg: 120000, cena_wyjsciowa: 25000, cena_koncowa: 22000 },
+                { rok: 2019, przebieg: 100000, cena_wyjsciowa: 30000, cena_koncowa: 28000 },
+                { rok: 2020, przebieg: 50000, cena_wyjsciowa: 40000, cena_koncowa: 32000 },
+                { rok: 2021, przebieg: 20000, cena_wyjsciowa: 45000, cena_koncowa: 42000 },
+                { rok: 2022, przebieg: 15000, cena_wyjsciowa: 50000, cena_koncowa: 48000 },
+                { rok: 2023, przebieg: 10000, cena_wyjsciowa: 60000, cena_koncowa: 52000 }]
+        </pre>
+    <button id="show-table-btn">Pokaż tabelę</button>
+    </div>
+</main>
+<script src="table.js"></script>
+</body>
+

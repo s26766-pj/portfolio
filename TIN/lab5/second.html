@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="lab5z12.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIN Lab5</title>
+
+<body>
+<div class="container">
+    <div class="left-column">
+        <ul class="navigation">
+            <li><a href="index.html">Zadanie 11</a></li>
+            <li><a href="second.html">Zadanie 12</a></li>
+
+        </ul>
+    </div>
+    <div class="right-column">
+        <div class="scrollable-content">
+        <!--        wstrzykuj-->
+        <h1>Zadanie 12</h1>
+        <p>12. Student i Ocena: klasy w ECMA6.</p>
+        <p>12.1 Stwórz klasę Ocena z konstruktorem. Ma mieć 2 pola:</p>
+- przedmiot: nazwa przedmiotu,<br>
+- wartosc: wartość liczbowa oceny.
+        <pre>
+                <code>
+
+class Grade {
+    constructor(course, value) {
+        this.course = course;
+        this.value = value;
+    }
+}
+                </code>
+        </pre>
+            <p>12.2 Stwórz klasę Student, zawierającą:</p>
+- tablicę ocen,<br>
+- pole na średnią ocen,<br>
+- konstruktor (parametry, imię i nazwisko),<br>
+- metodę hello, zwracającą komunikat z imieniem, nazwiskiem i aktualną średnią ocen.
+            <pre>
+                <code>
+
+class Student {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.grades = [];
+        this.averageGrade = 0;
+    }
+
+    set setGrade(x) {
+        if (x instanceof Grade) {
+            this.grades.push(x);
+            this.calculateGradeAverage()
+        } else {
+            console.log("Błąd!");
+        }
+    }
+
+    hello() {
+        return `Witaj, ${this.firstName} ${this.lastName}!
+                Twoja średnia ocen wynosi: ${this.averageGrade}`;
+    }
+}
+                </code>
+        </pre>
+            <p>12.3 Do klasy Student dodaj setter oceny(x). Jeśli x jest
+                obiektem klasy Ocena, ma zostać dopisany do tablicy ocen.
+                Równocześnie ma zostać przeliczona średnia ocen.</p>
+
+        <pre>
+        <code>
+
+    set setGrade(x) {
+        if (x instanceof Grade) {
+            this.grades.push(x);
+            this.calculateGradeAverage()
+        } else {
+            console.log("Błąd!");
+        }
+    }
+
+    calculateGradeAverage() {
+        if (this.grades.length === 0) {
+            this.averageGrade = 0;
+            return;
+        }
+
+        let sum = 0;
+        this.grades.forEach(grade => {
+            sum += grade.value;
+        });
+
+        this.averageGrade = sum / this.grades.length;
+    }
+        </code>
+        </pre>
+            <p>12.4 Do klasy Student dodaj getter oceny(). Powinien zwrócić aktualne oceny studenta, dodane przy pomocy settera.</p>
+        <pre>
+        <code>
+
+    get getGrades() {
+        if (this.grades.length === 0) {
+            return "Brak ocen.";
+        }
+
+        let result = "";
+        this.grades.forEach(grade => {
+            result += `Przedmiot: ${grade.course} - ocena ${grade.value}. `;
+        });
+
+        return result.trim();
+    }
+        </code>
+        </pre>
+Utworzenie nowego studenta i prezentacja wyniku funckji hello w konsoli:
+        <pre>
+        <code>
+
+const s = new Student("Jan", "Kowalski");
+console.log("\nFunkcja hello:\n")
+console.log(s.hello());
+        </code>
+        </pre>
+
+Przypisane (setter) ocen dla studenta przy pomocy instancji klasy Ocena (Grade):
+        <pre>
+        <code>
+
+s.setGrade = new Grade("WIA", 4);
+s.setGrade = new Grade('TIN', 3);
+s.setGrade = new Grade('POJ', 2);
+        </code>
+        </pre>
+Prezentacja kodu w konsoli:
+        <pre>
+        <code>
+
+console.log("\nFunkcja getGrades:\n")
+console.log(s.getGrades);
+console.log("\nFunkcja hello po dodaniu ocen:\n")
+console.log(s.hello());
+        </code>
+        </pre>
+    </div>
+    </div>
+</div>
+<div class="footer">
+    This sample page was created especially for laboratories taking place at PJATK in the subject of Internet technologies by a student with index number s26766.
+</div>
+</body>
+</html>

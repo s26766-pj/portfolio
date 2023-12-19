@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="lab5z11.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIN Lab5</title>
+
+<body>
+<div class="container">
+    <div class="left-column">
+        <ul class="navigation">
+            <li><a href="index.html">Zadanie 11</a></li>
+            <li><a href="second.html">Zadanie 12</a></li>
+
+        </ul>
+    </div>
+    <div class="right-column">
+        <div class="scrollable-content">
+        <!--        wstrzykuj-->
+        <h1>Zadanie 11</h1>
+        <p>11. Dany jest Obiekt:
+            auto{rok, przebieg, cena_wyjsciowa, cena_koncowa}.</p>
+        <p>11.1 Napisz następujące metody w obiekcie:</p>
+a) Metoda, która powiększa cenę wyjściową o 1.000.<br>
+b) Metoda, która obniża cenę końcową o 1.000 za każdy rok wieku auta<br>
+c) Metoda, która obniża cenę końcową o 10.000 za każde 100.000 km przebiegu auta.<br>
+d) Metoda, która dopisuje do auta podany przebieg i rok.
+        <pre>
+                <code>
+
+let auto = {
+    year_of_production: null,
+    mileage: null,
+    starting_price: 99000,
+    final_price: null,
+
+    // a)
+    increaseStartingPrice: function () {
+        this.starting_price += 1000;
+    },
+
+    // b)
+    decreaseFinalPriceRelativeToAge: function () {
+        let currentYear = new Date().getFullYear();
+        let carAge = currentYear - this.year_of_production;
+        this.final_price -= 1000 * carAge;
+    },
+
+    // c)
+    decreaseFinalPriceRelativeToMileage: function () {
+        let numberOfEveryOneHundredThousandKilometers =
+                    Math.floor(this.mileage / 100000);
+        this.final_price -= 10000 * numberOfEveryOneHundredThousandKilometers;
+    },
+
+    // d)
+    setMileageAndYearOfProduction: function (setMileage, setYearOfProduction) {
+        this.mileage = setMileage;
+        this.year_of_production = setYearOfProduction;
+        this.final_price = this.starting_price;
+        this.decreaseFinalPriceRelativeToAge();
+        this.decreaseFinalPriceRelativeToMileage();
+    },
+
+    toString: function () {
+        return `\n\n\t\tRok produkcji: ${this.year_of_production}
+        Przebieg: ${this.mileage} km
+        Cena wyjściowa: ${this.starting_price} zł
+        Cena końcowa: ${this.final_price} zł\n\n`;
+    },
+
+};
+                </code>
+        </pre>
+            <p>Prezentacja kodu w konsoli:</p>
+            <pre>
+                <code>
+
+// Obiekt "auto"
+console.log("Auto: " + auto)
+
+// Przykładowe użycie
+auto.increaseStartingPrice();
+console.log("Nowa cena wyjściowa: " + auto.starting_price + " zł");
+
+auto.setMileageAndYearOfProduction(250000, 2003);
+console.log("Auto po aktualizacji danych: " + auto)
+                </code>
+        </pre>
+            <p>11.2 Stwórz tablicę obiektów typu auto oraz funkcje do niej:</p>
+        <pre>
+        <code>
+
+let expensive_automobiles = [
+    {
+            year_of_production: 2010,
+            mileage: 150000,
+            starting_price: 12000,
+            final_price: null
+    },
+    {
+            year_of_production: 2015,
+            mileage: 80000,
+            starting_price: 15000,
+            final_price: null
+    },
+    {
+            year_of_production: 2020,
+            mileage: 5000,
+            starting_price: 20000,
+            final_price: null
+    }
+];
+        </code>
+        </pre>
+e) Funkcja, która dopisze auto do tablicy samochodow, jesli jego cena jest wieksza niz 10.000.<br>
+        <pre>
+        <code>
+
+function addExpensiveAutomobileToTheTable(automobileToAdd) {
+    if (
+        typeof automobileToAdd === 'object' &&
+        automobileToAdd !== null &&
+        !Array.isArray(automobileToAdd)
+    ) {
+        if (automobileToAdd.starting_price > 10000) {
+            expensive_automobiles.push(automobileToAdd);
+            console.log("Dodano obiekt typu auto do tablicy.");
+        } else {
+            console.log("Odrzucono: Auto nie spełnia warunku cenowego.");
+        }
+    } else {
+        console.log("Błąd: Próba dodania nieprawidłowego elementu do tablicy.");
+    }
+}
+        </code>
+        </pre>
+f) Funkcja, ktora dla wszystkich aut z tablicy zwieksza rok o 1.
+        <pre>
+        <code>
+
+function increaseYearOfProductionForEachAutomobileInTable() {
+    expensive_automobiles.forEach(function(auto) {
+        auto.year_of_production++;
+    });
+    console.log("Zwiększono rok wszystkich aut o 1.");
+}
+        </code>
+        </pre>
+
+Przykładowe dane testowe:
+        <pre>
+        <code>
+
+const honda = {
+    year_of_production: 2011,
+    mileage: 140000,
+    starting_price: 12000,
+    final_price: null
+};
+
+const audi = {
+    year_of_production: 2009,
+    mileage: 270000,
+    starting_price: 9000,
+    final_price: null
+};
+
+const ford = {
+    year_of_production: 2007,
+    mileage: 250000,
+    starting_price: 5000,
+    final_price: null
+};
+
+const invalidElement = "String";
+        </code>
+        </pre>
+Prezentacja kodu w konsoli:
+        <pre>
+        <code>
+
+addExpensiveAutomobileToTheTable(honda);
+addExpensiveAutomobileToTheTable(audi);
+addExpensiveAutomobileToTheTable(ford);
+addExpensiveAutomobileToTheTable(invalidElement);
+
+increaseYearOfProductionForEachAutomobileInTable();
+console.log("Tablica po zwiększeniu roku:", expensive_automobiles);
+        </code>
+        </pre>
+    </div>
+    </div>
+</div>
+<div class="footer">
+    This sample page was created especially for laboratories taking place at PJATK in the subject of Internet technologies by a student with index number s26766.
+</div>
+</body>
+</html>
