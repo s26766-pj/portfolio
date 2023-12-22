@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<title>TIN lab7</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="TIN lab7">
+<meta name="keywords" content="HTML XHTML">
+<link rel="stylesheet" href="zadanie4.css" type="text/css">
+
+<body>
+<header>
+    <button id="hamburger-btn" class="hamburger-btn">&#9776;</button>
+    <nav>
+        <div class="subnav">
+            <button class="subnavbtn">Link1</button>
+            <div class="subnav-content">
+                <a href="#contact-form" target="_self">Link1</a>
+                <a href="#contact-form" target="_self">Link1</a>
+                <a href="#contact-form" target="_self">Link1</a>
+            </div>
+        </div>
+
+        <div class="subnav">
+            <button class="subnavbtn">Link2</button>
+            <div class="subnav-content">
+                <a href="#contact-form" target="_self">Link2</a>
+                <a href="#contact-form" target="_self">Link2</a>
+                <a href="#contact-form" target="_self">Link2</a>
+            </div>
+        </div>
+
+        <div class="subnav">
+            <button class="subnavbtn">Link3</button>
+            <div class="subnav-content">
+                <a href="#contact-form" target="_self">Link3</a>
+                <a href="#contact-form" target="_self">Link3</a>
+                <a href="#contact-form" target="_self">Link3</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="container">
+        <h1>Title 1</h1>
+        <br>
+        <h3>Subtitle</h3>
+        <br>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <br>
+        <img src="clouds.jpg" id="image" alt="chmury">
+        <br>
+        <br>
+        <h3>Subtitle</h3>
+        <br>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <br>
+        <h3>Subtitle</h3>
+        <br>
+        <p>
+            Lorem ipsum
+        </p>
+        <br>
+
+    </div>
+
+    <!--    tu ma zadziałać responsywność-->
+
+    <div>
+        <h1>Title 2</h1>
+        <br>
+        <p>
+            Lorem ipsum
+        </p>
+        <br>
+        <form id="contact-form">
+            <fieldset>
+                <legend>Formularz Zgłoszeniowy</legend>
+                <div class="form">
+                    <div>
+                        <label for="name">Imię i Nazwisko</label><br>
+                        <input id="name" name="name" type="text" class="name" placeholder="Imię i nazwisko"><br>
+                        <label for="message">Opis</label><br>
+                        <textarea id="message" name="message" maxlength="1000" placeholder="Napisz coś o sobie" rows="10" cols="30"></textarea><br>
+                        <label for="age">Wiek</label><br>
+                        <select id="age" name="age">
+                            <option value="" disabled selected>wybierz...</option>
+                            <option value="25">25</option>
+                            <option value="35">35</option>
+                            <option value="45">45</option>
+                        </select><br>
+                        <label for="age">Opcja</label><br>
+                        <label>
+                            <input type="radio" checked="checked" name="radio">
+                        </label>
+                        <label class="container">a</label><br>
+                        <label>
+                            <input type="radio" name="radio">
+                        </label>
+                        <label class="container">b</label><br>
+                        <label>
+                            <input type="radio" name="radio">
+                        </label>
+                        <label class="container">c</label><br>
+                        <button type="submit" onclick="alert('Wysłano!')">wyślij</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <table id="clouds-table">
+            <thead>
+            <tr>
+                <th>col1</th>
+                <th>col2</th>
+                <th>col3</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+<footer>
+    <table id="nav-table" class="custom-table">
+        <tbody>
+        <tr>
+            <td><button class="subnavbtn">Link1</button></td>
+            <td><button class="subnavbtn">Link2</button></td>
+            <td><button class="subnavbtn">Link3</button></td>
+        </tr>
+        </tbody>
+    </table>
+</footer>
+<script src="hamburger.js"></script>
+</body>

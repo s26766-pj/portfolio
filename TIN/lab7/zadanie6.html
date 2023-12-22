@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<title>Zadanie 6</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="TIN lab6">
+<meta name="keywords" content="HTML XHTML">
+<link rel="stylesheet" href="style.css" type="text/css">
+
+<body>
+<header>
+    <nav>
+        <table id="nav-table" class="custom-table">
+            <tbody>
+            <tr>
+                <td><a href="https://github.com/s26766-pj/portfolio/tree/main/TIN/lab7"><button class="subnavbtn">Kod</button></a></td>
+                <td><a href="index.html"><button class="subnavbtn">Zadanie 4</button></a></td>
+                <td><a href="zadanie5.html"><button class="subnavbtn">Zadanie 5</button></a></td>
+                <td><a href="zadanie6.html"><button class="subnavbtn">Zadanie 6</button></a></td>
+            </tr>
+            </tbody>
+        </table>
+    </nav>
+</header>
+<main>
+    <div class="table-container">
+        <h1>TIN lab 7</h1>
+        <br>
+        <h3>Zadanie 6</h3>
+        <br>
+        <p>
+            Galeria zdjęć typu Lightbox, gdzie modelami są moje psy:
+        </p>
+        <br>
+        <div class="gallery">
+            <div class="image-container">
+                <div class="image" onclick="openLightbox(0)">
+                    <img src="gallery/img01.jpg" alt="Image 1">
+                </div>
+            </div>
+            <div class="image-container">
+                <div class="image" onclick="openLightbox(1)">
+                    <img src="gallery/img02.jpg" alt="Image 2">
+                </div>
+            </div>
+            <div class="image-container">
+                <div class="image" onclick="openLightbox(2)">
+                    <img src="gallery/img03.jpg" alt="Image 3">
+                </div>
+            </div>
+            <div class="image-container">
+                <div class="image" onclick="openLightbox(3)">
+                    <img src="gallery/img04.jpg" alt="Image 4">
+                </div>
+            </div>
+            <div class="image-container">
+                <div class="image" onclick="openLightbox(4)">
+                    <img src="gallery/img05.jpg" alt="Image 5">
+                </div>
+            </div>
+            <div class="image-container">
+                <div class="image" onclick="openLightbox(5)">
+                    <img src="gallery/img06.jpg" alt="Image 6">
+                </div>
+            </div>
+            <div class="image-container">
+                <div class="image" onclick="openLightbox(6)">
+                    <img src="gallery/img07.jpg" alt="Image 7">
+                </div>
+            </div>
+            <div class="image-container">
+                <div class="image" onclick="openLightbox(7)">
+                    <img src="gallery/img08.jpg" alt="Image 8">
+                </div>
+            </div>
+            <div class="image-container">
+                <div class="image" onclick="openLightbox(8)">
+                    <img src="gallery/img09.jpg" alt="Image 9">
+                </div>
+            </div>
+
+        </div>
+
+        <div id="lightbox" class="lightbox">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-image" class="lightbox-content" src="" alt="Lightbox Image">
+            <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+            <span class="next" onclick="changeImage(1)">&#10095;</span>
+        </div>
+    </div>
+</main>
+<footer>
+</footer>
+<script src="gallery.js"></script>
+</body>
