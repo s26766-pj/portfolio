@@ -254,8 +254,8 @@ form {
     color: white;
     font-size: 2em;
     position: absolute;
-    top: 10px; /* Odległość od góry obrazu */
-    right: 10px; /* Odległość od prawej strony obrazu */
+    top: 10px;
+    right: 10px;
     cursor: pointer;
 }
 
