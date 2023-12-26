@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #1a2b45;
+    margin: 0;
+    padding: 0;
+
+}
+
+@media only screen and (max-width: 400px) {
+    #app {
+        background-image: url('resource/bg_small.jpg');
+    }
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    background-image: url('resource/bg.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.doors {
+    display: flex;
+}
+
+.door {
+    background: #fafafa;
+    width: 111px;
+    height: 111px;
+    overflow: hidden;
+    border: 3px solid #243a3b;
+}
+
+.boxes {
+    transition: transform 1s ease-in-out;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.buttons {
+    margin: 0.5rem 0 0.5rem 0;
+    text-align: right;
+
+}
+
+button {
+    color: #050000;
+    background: #75aac4;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin: 0 0.2rem;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.info {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.calculator {
+    background: #314c72;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.4),
+    4px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.count {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+}
+
+.input_first_digit {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+}
+
+.input_second_digit {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+}
+
+.output {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    background: #75aac4;
+    min-height: 50px;
+    padding: 5px;
+    margin: 0 1px 10px;
+    border-radius: 0.25rem;
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.output pre {
+    text-align: right;
+    font-size: 25px;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    width: 288px;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.output pre::-webkit-scrollbar {
+    display: none;
+}
+
+.output #upper {
+    color: #424242;
+    font-size: 18px;
+}
+
+.input {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
