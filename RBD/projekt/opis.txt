@@ -1,0 +1,3 @@
+Opis i założenia:
+
+Biblioteka gminna znajduje się w małej miejscowości. Jest jedyną filią. Ze względu na ograniczony budżet zatrudniony jest tylko jeden bibliotekarz. Każdy czytelnik może równocześnie posiadać nie więcej niż pięć wypożyczonych książek. Wszystkie pozycje są wypożyczane na cztery tygodnie. Wszystkie książki w bibliotece są skatalogowane i mogą być wyszukane po tytule, autorze, gatunku lub haśle przedmiotowym. Niektóre książki mogą mieć wiele egzemplarzy.
