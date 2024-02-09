@@ -1,0 +1,80 @@
+Numeryczne:
+
+liczby całkowite:
+
+INT		zakres od -2147483648 do 2147483647
+		bez minusa od 0 do 4294967295
+		maksymalna długość to 11 cyfr
+
+TINYINT 	zakres od -128 to 127
+		bez minusa od 0 do 255
+		maksymalna długość to 4 cyfr
+
+SMALLINT 	zakres od -32768 do 32767
+		bez minusa od 0 do 65535
+		maksymalna długość to 5 cyfr
+
+MEDIUMINT 	zakres od -8388608 do 8388607
+		bez minusa od 0 do 16777215
+		maksymalna długość to 9 cyfr
+
+BIGINT		zakres od -9223372036854775808 do 9223372036854775807
+		bez minusa od 0 do 18446744073709551615
+		maksymalna długość to 11 cyfr
+
+liczby zmiennoprzecinkowe:
+
+FLOAT(M,D) 	precyzja dziesiętna może wynosić do 24 miejsc po przecinku
+		można zdefiniować długość wyświetlacza (M) i liczbe miejsc po przecinku (D)
+		nie jest to wymagane i domyślnie wynosi 10,2
+
+DOUBLE(M,D)	precyzja dziesiętna może sięgać 53 miejsc po przecinku
+lub REAL	można zdefiniować długość wyświetlacza (M) i liczbe miejsc po przecinku (D)					nie jest to wymagane i domyślnie wynosi 16,4
+
+DECIMAL(M,D) 	zdefiniowanie długości wyświetlacza (M) i liczby miejsc po przecinku (D) jest wymagane 
+lub NUMERIC
+
+Daty i godziny:
+
+Typy daty i godziny:
+
+DATE		data w formacie RRRR-MM-DD
+		pomiędzy 1000-01-01 a 9999-12-31
+		np. 1973-12-30
+
+DATETIME	kombinacja daty i godziny w formacie RRRR-MM-DD HH:MM:SS
+		pomiędzy 1000-01-01 00:00:00 i 9999-12-31 23:59:59
+		np. 1973-12-30 15:30:00
+
+TIMESTAMP	znacznik czasu pomiędzy północą 1 stycznia 1970 r. a jakimś czasem w 2037 r.
+		podobne do DATETIME, tylko bez łączników między liczbami
+		np. 19731230153000 (RRRRMMDDDHHMMSS)
+
+TIME		przechowuje czas w formacie GG:MM:SS
+
+YEAR(M)		przechowuje rok w formacie 2-cyfrowym lub 4-cyfrowym
+		domyślna długość to 4
+		jeśli długość jest określona jako 4, zakres wynosi od 1901 do 2155
+		jeżeli długość (M) jest określona jako 2, zakres to od 1970 do 2069 (70 do 69)
+
+Ciągi znaków:
+
+VARCHAR(M)	łańcuch o zmiennej długości od 1 do 255 znaków, trzeba zdefiniować długość
+
+BLOB 		pole o maksymalnej długości 65535 znaków
+		obiekty BLOB ang. Binary Large Objects służą do przechowywania dużych ilości danych 		binarnych, takich jak obrazy lub inne typy plików
+		sortowanie i porównywanie jest czułe na wielkość liter 
+
+TEXT		pole o maksymalnej długości 65535 znaków, podobne do BLOB,
+		z wyjątkiem, że jest nie czułe na wielkość znaków
+
+TINYBLOB
+lub TINYTEXT 	maksymalna długości to 255 znaków
+
+MEDIUMBLOB
+lub MEDIUMTEXT 	maksymalna długości to 16777215 znaków
+
+LONGBLOB
+lub LONGTEXT	maksymalna długości to 4294967295 znków
+
+ENUM		fantazyjne określenie listy np. ENUM („A”, „B”, „C”)

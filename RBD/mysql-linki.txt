@@ -1,0 +1,9 @@
+dokumentacja:
+https://dev.mysql.com/doc/refman/8.0/en/join.html
+https://dev.mysql.com/doc/refman/8.0/en/group-by-modifiers.html
+https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html
+https://dev.mysql.com/doc/refman/8.0/en/union.html
+
+rysowanie modeli:
+app.diagrams.net
+dbdiagram.io
