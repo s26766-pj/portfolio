@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.s26766bank.AccountRepositoryImplTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-01-28T17:00:09" hostname="GDA311-01" time="0.029">
+  <properties/>
+  <testcase name="testFindByIdNotFound()" classname="com.example.s26766bank.AccountRepositoryImplTest" time="0.014"/>
+  <testcase name="testFindAllByBalanceGreaterThanEmptyResult()" classname="com.example.s26766bank.AccountRepositoryImplTest" time="0.006"/>
+  <testcase name="testFindAllByBalanceGreaterThan()" classname="com.example.s26766bank.AccountRepositoryImplTest" time="0.003"/>
+  <testcase name="testSaveAndFindById()" classname="com.example.s26766bank.AccountRepositoryImplTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
