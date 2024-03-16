@@ -1,0 +1,18 @@
+<?php
+$owoce = array("jablko", "banan", "pomarancza");
+
+// Pętla iterująca
+foreach ($owoce as $owoc) {
+    // Odwrócenie napisu
+    $odwrocony_owoc = '';
+    for ($i = strlen($owoc) - 1; $i >= 0; $i--) {
+        $odwrocony_owoc .= $owoc[$i];
+    }
+
+    // Sprawdzenie czy zaczyna się od "p"
+    $zaczyna_sie_p = ($owoc[0] == 'p');
+
+    // Wyświetlenie
+    echo $odwrocony_owoc . " " . ($zaczyna_sie_p ? "(zaczyna sie od 'p')" : "") . "\n";
+}
+?>
