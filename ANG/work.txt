@@ -1,6 +1,6 @@
 fixed-term employment contract - umowa na czas określony 
 contract for an indefinite period (permanent contract) - umowa na czas nieokreślony 
-shadow employment agreement (grey contract) - "śmiecówka" 
+junk contract - "śmiecówka" 
 civil-law contract - umowa cywilno-prawna 
 contract of mandate - umowa zlecenie / umowa o dzieło 
 freelancer - "wolny strzelec" 
@@ -24,6 +24,4 @@ personal / corporate tax – PIT (podatek od osób fizycznych) / CIT (podatek od
 sick leave – zwolnienie lekarskie 
 maternity / paternity leave – urlop macierzyński / tacierzyński 
 tax exemption – zwolnienie z podatku 
-child tax relief – ulga podatkowa na dzieci 
- 
- 
+child tax relief – ulga podatkowa na dzieci
