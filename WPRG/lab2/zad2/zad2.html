@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Rezerwacji Hotelowej</title>
+</head>
+<body>
+<h2>Formularz Rezerwacji Hotelowej</h2>
+<form action="zad2.php" method="post">
+    <label for="number_of_guests">Liczba osób:</label>
+    <select id="number_of_guests" name="number_of_guests" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    <br>
+    <label for="first_name">Imię:</label>
+    <input type="text" id="first_name" name="first_name" required>
+    <br>
+    <label for="last_name">Nazwisko:</label>
+    <input type="text" id="last_name" name="last_name" required>
+    <br>
+    <label for="address">Adres:</label>
+    <input type="text" id="address" name="address" required>
+    <br>
+    <label for="credit_card">Numer karty kredytowej:</label>
+    <input type="text" id="credit_card" name="credit_card" required pattern="[0-9]{16}">
+    <br>
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+    <label for="stay_date">Data pobytu:</label>
+    <input type="date" id="stay_date" name="stay_date" required>
+    <br>
+    <label for="arrival_time">Godzina przyjazdu:</label>
+    <input type="time" id="arrival_time" name="arrival_time" required>
+    <br>
+    <label for="child_bed">Dostawienie łóżka dla dziecka:</label>
+    <input type="checkbox" id="child_bed" name="child_bed">
+    <br>
+    <label for="amenities">Udogodnienia:</label><br>
+    <input type="checkbox" id="ac" name="amenities[]" value="Klimatyzacja">
+    <label for="ac">Klimatyzacja</label><br>
+    <input type="checkbox" id="smoking_room" name="amenities[]" value="Popielniczka">
+    <label for="smoking_room">Popielniczka dla palacza</label><br>
+    <br>
+    <button type="submit">Zarezerwuj</button>
+</form>
+</body>
+</html>
