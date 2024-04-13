@@ -1,8 +1,10 @@
 fixed-term employment contract - umowa na czas określony 
 contract for an indefinite period (permanent contract) - umowa na czas nieokreślony 
 junk contract - "śmiecówka" 
-civil-law contract - umowa cywilno-prawna 
+civil-law contract - umowa cywilno-prawna
 contract of mandate - umowa zlecenie / umowa o dzieło 
+contract of enterprise - umowa zlecenie / umowa o dzieło 
+contract for (specific) service - umowa zlecenie / umowa o dzieło 
 freelancer - "wolny strzelec" 
 economic activity - działalność gospodarcza 
 full-time / half-time / part-time job – praca na cały etat / na pół etatu / w niepełnym wymiarze godzin 
@@ -25,3 +27,41 @@ sick leave – zwolnienie lekarskie
 maternity / paternity leave – urlop macierzyński / tacierzyński 
 tax exemption – zwolnienie z podatku 
 child tax relief – ulga podatkowa na dzieci
+to stipulate - ustalić, ustanawiać
+remuneration - wynagrodzenie
+to dismiss someone - zwolnić kogoś z poważnego powodu np. kradzieży 
+incompetence - niekompetencja
+misconduct - niewłaściwe postępowanie
+unsatisfactory performance - niezadowalające wykonanie
+rowdy behavior - awanturnicze zachowanie
+to fire someone - wyrzucić / wylać kogoś z pracy
+sack someone - wyrzucić / wylać kogoś z pracy
+to give someone the sack - wyrzucić / wylać kogoś z pracy
+to get the axe - zostać wylanym z pracy
+to terminate - rozwiązać np. umowę, wypowiedzieć komuś umowę
+to lay off - zwolnić kogoś tymczasowo, ze względu na brak zleceń
+severance package - odprawa
+to be made redundant - stać się niepotrzebnym, zbędnym, np. gdy stanowisko zastąpi robot
+to downsize - redukować liczbę etatów
+to redeploy somebody in - przesunąc na inne stanowisko lub inną lokalizację
+duration - czas trwania
+perceived as - postrzegany jako
+pre-retirement age - wiek przedemerytalny
+to shorten - skrócić
+permanent employee - pracownik zatrudniony na czas nieokreślony
+interchangeably - wymiennie
+temp (temporary employee) - pracownik tymczasowy
+to extend - przedłużyć
+moreover - ponadto, po za tym
+to indicate - wskazywać
+to issue an invoice - wystawić fakturę
+otherwise null and void - pod rygorem nieważności
+the principal - zleceniodawca
+the contractor - zleceniobiorca, wykonawca
+upon written consent - za pisemną zgodą
+provision - przepisy, ustalenia, unormowania prawne
+due performance - należyte, słuszne wykonanie
+two counterparts - dwa odpowiedniki, dw identyczne egzemplarze
+to reimburse costs - zwrócić koszty
+research and academic topics - tematy naukowo-badawcze
+concerning - dotyczy, dotyczący
