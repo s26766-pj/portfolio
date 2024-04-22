@@ -7,23 +7,7 @@
 </head>
 <body>
 <h2>Kalkulator</h2>
-<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-    <label for="number1">Liczba 1:</label>
-    <input type="number" id="number1" name="number1" required>
-    <br>
-    <label for="number2">Liczba 2:</label>
-    <input type="number" id="number2" name="number2" required>
-    <br>
-    <label for="operation">Działanie:</label>
-    <select id="operation" name="operation">
-        <option value="add">Dodawanie</option>
-        <option value="subtract">Odejmowanie</option>
-        <option value="multiply">Mnożenie</option>
-        <option value="divide">Dzielenie</option>
-    </select>
-    <br>
-    <button type="submit">Oblicz</button>
-</form>
+
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
