@@ -1,5 +1,6 @@
 package pl.pjwstk.demo;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 
 @Entity
@@ -14,6 +15,7 @@ public class Movie {
 
     private String category;
 
+    private Boolean isAvailable;
 
     public Integer getId() {
         return id;
@@ -37,5 +39,13 @@ public class Movie {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public Boolean getAvailable() {
+        return isAvailable;
+    }
+
+    public void setAvailable(Boolean available) {
+        isAvailable = available;
     }
 }

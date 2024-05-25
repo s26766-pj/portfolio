@@ -2,6 +2,7 @@ package pl.pjwstk.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -39,5 +40,19 @@ public class MovieService {
 
     public List<Movie> getAllMovies() {
         return movieRepository.findAll();
+    }
+
+    @Transactional
+    public void setMovieAvailable(Integer id) {
+        Movie movie = movieRepository.findById(id).orElseThrow(MovieNotFoundException::new);
+        movie.setAvailable(true);
+        movieRepository.save(movie);
+    }
+
+    @Transactional
+    public void setMovieUnavailable(Integer id) {
+        Movie movie = movieRepository.findById(id).orElseThrow(MovieNotFoundException::new);
+        movie.setAvailable(false);
+        movieRepository.save(movie);
     }
 }
