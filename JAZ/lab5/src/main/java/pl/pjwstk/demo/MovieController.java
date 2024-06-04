@@ -40,13 +40,15 @@ public class MovieController {
     }
 
     @PutMapping("/{id}/available")
-    public void setMovieAvailable(@PathVariable Integer id) {
+    public ResponseEntity<Void> setMovieAvailable(@PathVariable Integer id) {
         movieService.setMovieAvailable(id);
+        return ResponseEntity.noContent().build();
     }
 
     @PutMapping("/{id}/unavailable")
-    public void setMovieUnavailable(@PathVariable Integer id) {
+    public ResponseEntity<Void> setMovieUnavailable(@PathVariable Integer id) {
         movieService.setMovieUnavailable(id);
+        return ResponseEntity.noContent().build();
     }
 
     @DeleteMapping("/{id}")
