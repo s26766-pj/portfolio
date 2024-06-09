@@ -40,7 +40,7 @@ public class MovieController {
     }
 
     @PutMapping("/{id}/available")
-    public ResponseEntity<Void> setMovieAvailable(@PathVariable Integer id) {
+    public ResponseEntity<Movie> setMovieAvailable(@PathVariable Integer id) {
         movieService.setMovieAvailable(id);
         return ResponseEntity.noContent().build();
     }
