@@ -13,9 +13,11 @@ import pl.pjatk.demo.service.RentalService;
 public class RentalController {
     private final RentalService rentalService;
 
+
     public RentalController(RentalService rentalService) {
         this.rentalService = rentalService;
     }
+
 
     @GetMapping("/movies/{id}")
     public ResponseEntity<Movie> getMovie(@PathVariable Long id){

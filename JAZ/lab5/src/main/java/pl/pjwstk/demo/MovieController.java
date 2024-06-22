@@ -1,5 +1,9 @@
 package pl.pjwstk.demo;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,12 +19,22 @@ public class MovieController {
         this.movieService = movieService;
     }
 
+    @Operation(summary = "List all movies")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Success! All movies have been retrieved.")
+    })
     @GetMapping("/all")
     public ResponseEntity<List<Movie>> getAll() {
         return ResponseEntity.ok(movieService.getAllMovies());
     }
 
+
     @GetMapping("/{id}")
+    @Operation(summary = "Get Movie by provided id.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Success! Movie have been retrieved."),
+            @ApiResponse(responseCode = "404", description = "Fail! Movie not found!", content = @Content)
+    })
     public ResponseEntity<Movie> getMovieById(@PathVariable Integer id) {
         return ResponseEntity.ok(movieService.getMovieById(id));
     }
