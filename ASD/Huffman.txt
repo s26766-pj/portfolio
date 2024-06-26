@@ -1,0 +1,10 @@
+HUFFMAN(C)
+1 n = |C|
+2 Q = C
+3 	for i = 1 to n - 1
+4 	allocate a new node z
+5 	z.left = x = EXTRACT-MIN(Q)
+6 	z.right = y = EXTRACT-MIN(Q)
+7 	z.freq = x.freq + y.freq
+8 	INSERT(Q,z)
+9 return EXTRACT-MIN(Q) // return the root of the tree
