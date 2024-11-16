@@ -1,0 +1,30 @@
+<?php
+
+function czy_liczba_pierwsza($liczba) {
+    if ($liczba < 2) {
+        return false;
+    }
+    for ($i = 2; $i <= sqrt($liczba); $i++) {
+        if ($liczba % $i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function wypisz_liczby_pierwsze($poczatek, $koniec) {
+    for ($liczba = $poczatek; $liczba <= $koniec; $liczba++) {
+        if (czy_liczba_pierwsza($liczba)) {
+            echo $liczba . " ";
+        }
+    }
+}
+
+// Zakres
+$poczatek_zakresu = 2;
+$koniec_zakresu = 100;
+
+echo "Liczby pierwsze w zakresie od $poczatek_zakresu do $koniec_zakresu:\n";
+wypisz_liczby_pierwsze($poczatek_zakresu, $koniec_zakresu);
+
+?>

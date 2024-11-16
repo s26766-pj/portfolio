@@ -1,0 +1,3 @@
+interface Purchase {
+    String getPurchaseInfo();
+}

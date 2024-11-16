@@ -1,0 +1,33 @@
+<?php
+
+// Tekst
+$tekst = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+
+// Tworzenie tablicy z tekstu, oddzielając po spacji
+$tablica_tekstu = explode(" ", $tekst);
+
+// Usuwanie znaków interpunkcyjnych z tablicy
+for ($i = 0; $i < count($tablica_tekstu); $i++) {
+    // Sprawdzanie, czy aktualny element zawiera znaki interpunkcyjne
+    if (strpbrk($tablica_tekstu[$i], '.,?!:;()[]{}"\'') !== false) {
+        // Jeśli tak, przesunięcie każdego następnego elementu o jeden do tyłu
+        for ($j = $i; $j < count($tablica_tekstu) - 1; $j++) {
+            $tablica_tekstu[$j] = $tablica_tekstu[$j + 1];
+        }
+        // Usunięcie ostatniego elementu
+        unset($tablica_tekstu[count($tablica_tekstu) - 1]);
+    }
+}
+
+// Utworzenie tablicy asocjacyjnej, gdzie kolejne elementy parzyste są kluczami, a następujące po nich wartościami
+$tablica_asocjacyjna = array();
+for ($i = 0; $i < count($tablica_tekstu) - 1; $i += 2) {
+    $tablica_asocjacyjna[$tablica_tekstu[$i]] = $tablica_tekstu[$i + 1];
+}
+
+// Wypisanie pary klucz-wartość w oddzielnej linii
+foreach ($tablica_asocjacyjna as $klucz => $wartosc) {
+    echo "$klucz - $wartosc\n";
+}
+
+?>
