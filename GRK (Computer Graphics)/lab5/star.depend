@@ -1,0 +1,84 @@
+# depslib dependency file v1.0
+1733161690 source:c:\msys64\home\kamil\grk-lab5\star\glerror.cpp
+	"glerror.h"
+	<iostream>
+
+1733161690 c:\msys64\home\kamil\grk-lab5\star\glerror.h
+	<GL/glew.h>
+
+1733166648 source:c:\msys64\home\kamil\grk-lab5\star\main.cpp
+	"window.h"
+	<iostream>
+	<GL/glew.h>
+	<GLFW/glfw3.h>
+
+1733167576 c:\msys64\home\kamil\grk-lab5\star\window.h
+	<cstring>
+	<GL/glew.h>
+	<GLFW/glfw3.h>
+	"triangle.h"
+	"star.h"
+	"estar.h"
+	"ecircle.h"
+	"circle.h"
+
+1733161690 c:\msys64\home\kamil\grk-lab5\star\triangle.h
+	<GL/glew.h>
+	"program.h"
+
+1733161690 c:\msys64\home\kamil\grk-lab5\star\program.h
+	<GL/glew.h>
+
+1733161690 source:c:\msys64\home\kamil\grk-lab5\star\program.cpp
+	"program.h"
+	<GL/glew.h>
+	<GLFW/glfw3.h>
+	<iostream>
+	<cstdlib>
+
+1733161690 source:c:\msys64\home\kamil\grk-lab5\star\triangle.cpp
+	"triangle.h"
+	<GL/glew.h>
+
+1733166796 source:c:\msys64\home\kamil\grk-lab5\star\ecircle.cpp
+	"ecircle.h"
+	<GL/glew.h>
+	<cmath>
+
+1733162656 c:\msys64\home\kamil\grk-lab5\star\ecircle.h
+	<GL/glew.h>
+	"program.h"
+
+1733169227 source:c:\msys64\home\kamil\grk-lab5\star\estar.cpp
+	"estar.h"
+	<GL/glew.h>
+
+1733162694 c:\msys64\home\kamil\grk-lab5\star\estar.h
+	<GL/glew.h>
+	"program.h"
+
+1733168876 source:c:\msys64\home\kamil\grk-lab5\star\star.cpp
+	"star.h"
+	<GL/glew.h>
+
+1733162728 c:\msys64\home\kamil\grk-lab5\star\star.h
+	<GL/glew.h>
+	"program.h"
+
+1733169734 source:c:\msys64\home\kamil\grk-lab5\star\window.cpp
+	"window.h"
+	<iostream>
+	<cstdlib>
+	<GL/glew.h>
+	<GLFW/glfw3.h>
+	"glerror.h"
+
+1733168042 source:c:\msys64\home\kamil\grk-lab5\star\circle.cpp
+	"circle.h"
+	<GL/glew.h>
+	<cmath>
+
+1733167393 c:\msys64\home\kamil\grk-lab5\star\circle.h
+	<GL/glew.h>
+	"program.h"
+
